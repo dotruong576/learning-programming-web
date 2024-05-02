@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Navbar from "@/components/navbar";
 
 export default function MainPage() {
   return (
-    <div className="h-full w-full flex-col">
-      <div className="h-1/2 bg-slate-200"></div>
-      <div className="h-1/2"></div>
+    <div>
+      <Navbar></Navbar>
+      <div className="bg-slate-100"></div>
     </div>
   );
 }
