@@ -1,5 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
+import React, { useState, FormEvent } from "react";
+import { auth } from "../api/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 export default function SignUp() {
   return (
     <form className="flex h-fit w-3/5 flex-col items-center justify-center ">
