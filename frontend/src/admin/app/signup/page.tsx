@@ -1,10 +1,10 @@
-import SignIn from "@/components/signin";
-export default function SignInPage() {
+import SignUp from "@/admin/components/signup";
+export default function SignUpPage() {
   return (
     <div className="flex h-full w-full flex-row">
       <div className="h-full w-3/5 bg-blue-100"></div>
       <div className="flex h-full w-2/5 items-center justify-center bg-white">
-        <SignIn></SignIn>
+        <SignUp></SignUp>
       </div>
     </div>
   );
