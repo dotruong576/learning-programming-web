@@ -1,6 +1,6 @@
 import { EUserRole } from "../../constant/enum/userEnum";
 
-export type TUserSchema = {
+export type UserSchema = {
     email: string;
     password: string;
     role: EUserRole;
