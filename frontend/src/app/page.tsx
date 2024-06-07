@@ -1,3 +1,5 @@
+import Button from "@mui/material/Button";
+
 export default function Home() {
-  return <main></main>;
+  return <Button>Hello</Button>;
 }
