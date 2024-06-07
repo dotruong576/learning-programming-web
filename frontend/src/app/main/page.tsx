@@ -1,4 +1,4 @@
-import Navbar from "@/admin/components/navbar";
+import Navbar from "@/components/navbar";
 
 export default function MainPage() {
   return (
