@@ -1,5 +1,5 @@
 import * as dotenv from 'dotenv';
-
+import { Algorithm } from 'jsonwebtoken';
 dotenv.config();
 
 const config = {
@@ -12,7 +12,7 @@ const config = {
     password: process.env.MONGODB_PASSWORD || '',
   },
   port: process.env.PORT || 3000,
-  JWTAlgorithm: 'HS256',
+  JWTAlgorithm: 'HS256' as Algorithm,
 };
 
 export default config;
