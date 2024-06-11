@@ -2,4 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 cd ./frontend; bash ./.husky/pre-commit
+cd ../frontend-admin; bash ./.husky/pre-commit
 cd ../backend; bash ./.husky/pre-commit
