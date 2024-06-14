@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { EUserRole } from '../constant/enum/userEnum';
 import { EMAIL_REGEX } from '../constant/regex';
-import { TUserDocument } from '../types/document.types';
+import { TUserDocument } from '../types/documentTypes';
 
 const { Schema } = mongoose;
 
