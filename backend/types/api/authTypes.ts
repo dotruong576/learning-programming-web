@@ -16,4 +16,4 @@ export type JWTVerify = {
     exp: number
 } & JWTPayload;
 
-export type TUserRole = Pick <UserSchema, 'email' | 'password' | 'role'>
+export type TUserRole = Pick <UserSchema, 'email' | 'fullName' | 'role'> & { id: string };
