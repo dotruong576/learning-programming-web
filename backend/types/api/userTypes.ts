@@ -1,4 +1,4 @@
-import { UserSchema } from '../schema/userSchemaType';
+import { UserSchema } from '../schema/userSchemaTypes';
 
 export type TGetUserDetailById = {
   userId: string;
