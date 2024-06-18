@@ -1,5 +1,5 @@
 import mongoose, { Document } from 'mongoose';
-import { UserSchema } from './schema/userSchemaType';
+import { UserSchema } from './schema/userSchemaTypes';
 
 export type TDocument<T> = Document<unknown, object, T> &
   T & {
