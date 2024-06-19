@@ -3,7 +3,7 @@
     "husky": "^9.0.11"
   },
   "scripts": {
-    "postinstall": "(cd backend && npm install) && (cd ../frontend && npm install)",
+    "postinstall": "(cd backend && npm install) && (cd ../frontend-user && npm install) && (cd ../frontend-admin npm install)",
     "prepare": "husky install"
   }
 }
