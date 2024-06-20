@@ -1,6 +1,6 @@
 import { ECourseStatus } from '../../constant/enum/courseEnum';
 
-export type TCourseSchema = {
+export type CourseSchema = {
   title: string;
   description: string;
   cover?: string;

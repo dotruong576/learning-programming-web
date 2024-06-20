@@ -1,4 +1,4 @@
-export type TCommentSchema = {
+export type CommentSchema = {
     userId: string;
     content: string;
     rating?: number;

@@ -1,23 +1,23 @@
 import { ELessonType, ESelectionAnswerChoiceList, EUserLessonStatus } from '../../constant/enum/lessonEnum';
 
-export type TUserLessonSchema = {
+export type UserLessonSchema = {
   userId: string;
   lessonId: string;
   courseId: string;
   status: EUserLessonStatus;
   type: ELessonType;
-  checkpoint: TUserVideoLessonCheckpoint | TUserSelectionLessonCheckpoint[] | TUserCodescriptLessonCheckpoint;
+  checkpoint: UserVideoLessonCheckpoint | UserSelectionLessonCheckpoint[] | UserCodescriptLessonCheckpoint;
 };
-export type TUserVideoLessonCheckpoint = {
+export type UserVideoLessonCheckpoint = {
   lastViewMoment: string;
 };
 
-export type TUserSelectionLessonCheckpoint = {
+export type UserSelectionLessonCheckpoint = {
   choosenAnswer: ESelectionAnswerChoiceList | null;
   isCorrect: boolean;
 };
 
-export type TUserCodescriptLessonCheckpoint = {
+export type UserCodescriptLessonCheckpoint = {
   code: string;
   result: boolean[];
 };
