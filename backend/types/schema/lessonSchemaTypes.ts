@@ -1,8 +1,8 @@
 import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
 
-export type TLessonResource = TVideoLessonResourse | TSelectionLessonResourse[] | TCodescriptLessonResourse[];
+export type LessonResource = VideoLessonResourse | SelectionLessonResourse[] | CodescriptLessonResourse[];
 
-export type TLessonSchema<T extends TLessonResource> = {
+export type LessonSchema<T extends LessonResource> = {
   courseId: string;
   title: string;
   description: string;
@@ -13,12 +13,12 @@ export type TLessonSchema<T extends TLessonResource> = {
   comments: string[];
 };
 
-export type TVideoLessonResourse = {
+export type VideoLessonResourse = {
   file: string;
   duration: string;
 };
 
-export type TSelectionLessonResourse = {
+export type SelectionLessonResourse = {
   question: string;
   explanation?: string;
   answerA: string;
@@ -28,7 +28,7 @@ export type TSelectionLessonResourse = {
   correctAnswer: ESelectionAnswerChoiceList;
 };
 
-export type TCodescriptLessonResourse = {
+export type CodescriptLessonResourse = {
   input: string;
   expected: string;
 };
