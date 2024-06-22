@@ -1,18 +1,28 @@
 "use client";
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useRef, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
-import { BellIcon } from "@heroicons/react/20/solid";
+import { Fragment } from "react";
+import {
+  BellIcon,
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/20/solid";
+import { useRouter } from "next/navigation";
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 export default function Navbar() {
+  const router = useRouter();
   return (
-    <nav className="flex h-10vh w-full items-center justify-start space-x-8 bg-blue-50">
+    <nav className="flex h-10vh w-full items-center justify-start space-x-8 bg-white">
       <div className="flex items-center space-x-8">
         {/* logo */}
-        <div className="h-full select-none place-content-center pl-8 font-sans text-3xl font-bold text-black hover:cursor-pointer">
+        <div
+          onClick={() => {
+            router.push("/main/mainpage");
+          }}
+          className="h-full select-none place-content-center pl-8 font-sans text-3xl font-bold text-black hover:cursor-pointer"
+        >
           pro<span className="text-blue-600">c</span>ode
         </div>
         {/* category dropdown menu */}
