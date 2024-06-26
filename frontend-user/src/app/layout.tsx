@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Providers from "./provider";
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,14 +12,12 @@ export const metadata: Metadata = {
     "Want to learn how to code like a professional? Check out our websites",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const SignupLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" className={"bg-main-color"}>
-      <body className={inter.className}>{children}</body>
-    </html>
+    <Providers>
+      {children}
+    </Providers>
   );
-}
+};
+
+export default SignupLayout;
