@@ -1,5 +1,4 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import routePath from '~/constant/routePath';
 import { TError } from '~/types/genericTypes';
 
 const baseURL = process.env.API_DOMAIN;

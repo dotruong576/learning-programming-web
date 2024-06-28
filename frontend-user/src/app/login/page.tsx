@@ -1,6 +1,6 @@
-import SignUp from "@/components/signup";
+import LogIn from "@/components/login";
 import Image from "next/image";
-export default function SignUpPage() {
+export default function LoginPage() {
   return (
     <div className="flex h-full w-full flex-row">
       <div className="h-full w-3/5 bg-blue-100 flex items-center  relative overflow-hidden">
@@ -14,7 +14,7 @@ export default function SignUpPage() {
         </div>
       </div>
       <div className="flex h-full w-2/5 items-center justify-center bg-white">
-        <SignUp></SignUp>
+        <LogIn></LogIn>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
-import SignIn from "@/components/signin";
+import Register from "@/components/register";
 import Image from "next/image";
-export default function SignInPage() {
+export default function RegisterPage() {
   return (
     <div className="flex h-full w-full flex-row">
       <div className="h-full w-3/5 bg-blue-100 flex items-center  relative overflow-hidden">
@@ -14,7 +14,7 @@ export default function SignInPage() {
         </div>
       </div>
       <div className="flex h-full w-2/5 items-center justify-center bg-white">
-        <SignIn></SignIn>
+        <Register></Register>
       </div>
     </div>
   );
