@@ -18,6 +18,9 @@ const config: Config = {
         "10vh": "10vh",
         "50vh": "50vh",
       },
+      backgroundColor: {
+        "main-color": "#EAFAFF",
+      },
     },
   },
   plugins: [],
