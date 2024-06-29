@@ -71,7 +71,7 @@ const LoginForm = () => {
         <div>Doesn't have an account?</div>
         <a
           className="font-bold text-blue-500 hover:cursor-pointer hover:text-blue-700 ml-2"
-          href="signup"
+          href="register"
         >
           Register
         </a>

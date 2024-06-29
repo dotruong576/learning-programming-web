@@ -96,7 +96,7 @@ const RegisterForm = () => {
         <div>Have an account?</div>
         <a
           className="font-bold text-blue-500 hover:cursor-pointer hover:text-blue-700 ml-2"
-          href="signin"
+          href="login"
         >
           Sign in
         </a>

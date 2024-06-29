@@ -4,6 +4,7 @@ import "./globals.css";
 import Providers from "./provider";
 import UserContextProvider from '~/context/UserContext';
 import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +16,14 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Providers>
+    <html lang="en">
+      <body>
+      <Providers>
       <UserContextProvider>{children}</UserContextProvider>
+     <ToastContainer />
     </Providers>
+      </body>
+    </html>
   );
 };
 
