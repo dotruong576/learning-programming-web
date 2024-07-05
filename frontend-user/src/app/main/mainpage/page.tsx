@@ -1,4 +1,4 @@
-import Thumbnail from "@/components/thumbnail";
+import Thumbnail from "~/components/courses";
 
 export default function MainPage() {
   return (

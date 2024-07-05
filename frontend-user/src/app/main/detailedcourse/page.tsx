@@ -1,5 +1,5 @@
 "use client";
-import Thumbnail from "@/components/thumbnail";
+import Thumbnail from "~/components/courses";
 import LearnerReview from "~/components/learnerReview";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 

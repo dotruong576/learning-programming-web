@@ -5,6 +5,7 @@ import Providers from "./provider";
 import UserContextProvider from '~/context/UserContext';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import Navbar from "~/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en">
       <body>
       <Providers>
+      <Navbar></Navbar>
       <UserContextProvider>{children}</UserContextProvider>
      <ToastContainer />
     </Providers>

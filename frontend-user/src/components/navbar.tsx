@@ -199,7 +199,9 @@ export default function Navbar() {
             </Transition>
           </Menu>
         ) : (
-          <div className={"mx-4 flex justify-end space-x-8"}></div>
+          <div className={"mx-4 flex justify-end space-x-8"}>
+            
+          </div>
         )}
       </div>
     </nav>
