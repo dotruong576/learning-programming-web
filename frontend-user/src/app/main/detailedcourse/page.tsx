@@ -1,9 +1,12 @@
+"use client";
 import Thumbnail from "@/components/thumbnail";
+import LearnerReview from "~/components/learnerReview";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 
 export default function DetailedCourse() {
   return (
     <div>
-      {/*course content*/}
+      {/*left*/}
       <div className="flex h-fit w-full">
         {/*left side of page*/}
         <div className="w-1/3 px-16 pt-16">
@@ -32,13 +35,23 @@ export default function DetailedCourse() {
         {/*right side of page*/}
         <div className="flex w-2/3 flex-col pl-16 pt-16">
           <div className="text-4xl font-bold">Course Title</div>
-          <div className="">Course description</div>
+          <div className="">
+            Course descriptionCourse descriptionCourse descriptionCourse
+            descriptionCourse descriptionCourse descriptionCourse
+            descriptionCourse descriptionCourse descriptionCourse
+            descriptionCourse description
+          </div>
           <div className="">
             <div className="text-2xl font-bold">Curriculum</div>
-            <div className="">Table of content</div>
+            <Accordion>
+              <AccordionItem title="Accordion 1">content 1</AccordionItem>
+              <AccordionItem title="Accordion 2">content 2</AccordionItem>
+              <AccordionItem title="Accordion 3">content 3</AccordionItem>
+            </Accordion>
           </div>
         </div>
       </div>
+      {/*right*/}
       <div>
         <p className={"m-8 text-2xl font-bold"}>Related courses</p>
       </div>
@@ -48,6 +61,7 @@ export default function DetailedCourse() {
         <Thumbnail />
         <Thumbnail />
       </div>
+      <LearnerReview />
     </div>
   );
 }

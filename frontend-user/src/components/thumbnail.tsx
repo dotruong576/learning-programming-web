@@ -1,9 +1,10 @@
 import { UserGroupIcon } from "@heroicons/react/16/solid";
+
 export default function Thumbnail() {
   return (
     <div
       className={
-        "space- flex w-1/5 flex-col space-y-4 rounded-lg bg-white p-4 shadow transition hover:shadow-2xl"
+        "space- flex w-1/5 flex-col space-y-4 rounded-lg bg-white p-4 shadow transition hover:cursor-pointer hover:shadow-2xl"
       }
     >
       <img
