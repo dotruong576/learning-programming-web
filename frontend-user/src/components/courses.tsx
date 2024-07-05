@@ -1,20 +1,65 @@
-import Image from "next/image";
+"use client";
+import React from "react";
+import { useRouter } from 'next/navigation';
+import routePath from "~/constant/routePath";
+import { People } from '@mui/icons-material';
+import { generatePathname } from '~/helper/generatePathname';
+import { Card, CardContent ,CardMedia, Typography, CardActionArea, MenuItem, ListItemIcon, Rating } from '@mui/material';
 
-export default function Thumbnail() {
+interface CourseComponentProps {
+  id: string;
+  image: string;
+  name: string;
+  views: number;
+  rating: number;
+}
+
+
+const Courses_Thumbnail: React.FC<CourseComponentProps> = ({ id, image, name, rating, views }) => {
+  const router = useRouter();
+  const onClickCourse = () => {
+    router.push(
+      generatePathname({
+        pathName: routePath.COURSE_DETAIL,
+        query: {
+          courseId: id,
+        },
+      }),
+    );
+  };
+  
   return (
-    <div
-      className={
-        "space- flex w-1/5 flex-col space-y-4 rounded-lg bg-white p-4 shadow transition hover:cursor-pointer hover:shadow-2xl"
-      }
-    >
-    <Image src="/default_img.png" alt="Course's Thumbnail" width={400} height={300}></Image>
-      <div className={"truncate text-center font-bold hover:cursor-pointer"}>
-        Simple C++ Course
+    <div className="relative rounded-2xl max-w-80" onClick={onClickCourse}>
+      <Card sx={{ maxWidth: 320, maxHeight: 320 }}>
+          <CardMedia
+            component="img"
+            image={image || "/default_img.png"} 
+            alt="course item"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {name} Code pro
+            </Typography>
+            <div className="flex flex-wrap">
+            <MenuItem>
+              <ListItemIcon>
+                <People fontSize="small" />
+                <span className="text-sm ml-1"> {views} Lượt xem</span>
+              </ListItemIcon>
+            </MenuItem>
+            <MenuItem>
+              <ListItemIcon>
+              <Rating name="read-only" value={rating} readOnly /> {rating}
+              </ListItemIcon>
+            </MenuItem>
+            </div>
+          </CardContent>
+      </Card>
+      <div className="absolute inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+        <button className="bg-white text-black px-4 py-2 rounded-2xl transition-colors">View course</button>
       </div>
-      <div className={"flex space-x-4"}>
-        <p className={""}>100000 learners</p>
-      </div>
-      <div className={"mb-4 flex"}>Rating</div>
-    </div>
+    </div> 
   );
 }
+
+export default Courses_Thumbnail;

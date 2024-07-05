@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     router.push('/main/mainpage');
-  }, []);
+  });
 
   return <main></main>;
 }
