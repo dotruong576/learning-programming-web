@@ -1,31 +1,25 @@
-import * as React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import useLogout from "~/hooks/auth/useLogout";
+import * as React from 'react';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import useLogout from '~/hooks/auth/useLogout';
 import Avatar from '@mui/material/Avatar';
-import { Box, IconButton, Tooltip, Typography } from '@mui/material';
+import { Box, IconButton, Tooltip } from '@mui/material';
 
 export default function AvatarMenu() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
 
-  const settings = ['Profile', 'Account', 'Logout'];
+  const { mutate } = useLogout();
+  const handleLogout = () => {
+    mutate();
+  };
 
   return (
     <div className={"mx-4"}>
@@ -51,11 +45,9 @@ export default function AvatarMenu() {
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
         >
-          {settings.map((setting) => (
-            <MenuItem key={setting} onClick={handleCloseUserMenu}>
-              <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
-            </MenuItem>
-          ))}
+          <MenuItem onClick={handleCloseUserMenu}>Profile</MenuItem>
+          <MenuItem onClick={handleCloseUserMenu}>Setting</MenuItem>
+          <MenuItem onClick={handleLogout}>Sign out</MenuItem>
         </Menu>
       </Box>
     </div>
