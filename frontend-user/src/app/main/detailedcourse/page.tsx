@@ -1,5 +1,4 @@
 "use client";
-import Thumbnail from "~/components/courses";
 import LearnerReview from "~/components/learnerReview";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
@@ -56,10 +55,6 @@ export default function DetailedCourse() {
         <p className={"m-8 text-2xl font-bold"}>Related courses</p>
       </div>
       <div className={"flex justify-around"}>
-        <Thumbnail />
-        <Thumbnail />
-        <Thumbnail />
-        <Thumbnail />
       </div>
       <LearnerReview />
     </div>
