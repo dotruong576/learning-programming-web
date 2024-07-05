@@ -1,3 +1,4 @@
+import Navbar from "~/components/navbar";
 export default function MainPageLayout({
   children,
 }: {
@@ -5,6 +6,7 @@ export default function MainPageLayout({
 }) {
   return (
     <section>
+      <Navbar/>
       {children}
     </section>
   );
