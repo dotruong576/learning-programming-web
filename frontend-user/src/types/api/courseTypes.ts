@@ -7,6 +7,7 @@ export interface IAllCouresResponse {
   cover: string;
   totalJoined: number;
   createdAt: string;
+  rating: number;
   _id: string;
 }
 
@@ -17,6 +18,7 @@ export type IGetCourseByIdResponse = {
   isCurrentUserJoined: boolean;
   totalJoined: number;
   status: ECourseStatus;
+  createdAt: string;
   rating: number;
   label: string[];
 

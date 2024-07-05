@@ -29,7 +29,7 @@ const Courses_Thumbnail: React.FC<CourseComponentProps> = ({ id, image, name, ra
   };
   
   return (
-    <div className="relative rounded-2xl max-w-80" onClick={onClickCourse}>
+    <div className="relative rounded-2xl max-w-80 m-4" onClick={onClickCourse}>
       <Card sx={{ maxWidth: 320, maxHeight: 320 }}>
           <CardMedia
             component="img"
@@ -38,9 +38,9 @@ const Courses_Thumbnail: React.FC<CourseComponentProps> = ({ id, image, name, ra
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {name} Code pro
+              {name}
             </Typography>
-            <div className="flex flex-wrap">
+            <div className="flex flex-start">
             <MenuItem>
               <ListItemIcon>
                 <People fontSize="small" />
@@ -49,7 +49,7 @@ const Courses_Thumbnail: React.FC<CourseComponentProps> = ({ id, image, name, ra
             </MenuItem>
             <MenuItem>
               <ListItemIcon>
-              <Rating name="read-only" value={rating} readOnly /> {rating}
+              <Rating name="read-only" value={rating} readOnly precision={0.25} /> {rating}
               </ListItemIcon>
             </MenuItem>
             </div>
