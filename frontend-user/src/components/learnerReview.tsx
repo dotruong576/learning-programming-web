@@ -57,7 +57,7 @@ export default function LearnerReview() {
           tellus condimentum, ut sollicitudin eros ornare.
         </Typography>
       </CardContent>
-      <CardActions className={'flex-row justify-start space-x-8 justify-center'}>
+      <CardActions className={'flex-row justify-start ms-4'}>
         <p>1000</p>
         <IconButton aria-label="Likes">
           <ThumbUpIcon />
