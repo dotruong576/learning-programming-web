@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -5,7 +6,9 @@ import useLogout from '~/hooks/auth/useLogout';
 import Avatar from '@mui/material/Avatar';
 import { Box, IconButton, Tooltip } from '@mui/material';
 
+
 export default function AvatarMenu() {
+
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {

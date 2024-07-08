@@ -1,6 +1,6 @@
 "use client";
-import LearnerReview from "~/components/learnerReview";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import LearnerReview from '~/components/learnerReview';
+import { Accordion, AccordionItem } from '@nextui-org/react';
 
 export default function DetailedCourse() {
   return (
@@ -32,7 +32,7 @@ export default function DetailedCourse() {
         </div>
 
         {/*right side of page*/}
-        <div className="flex w-2/3 flex-col pl-16 pt-16">
+        <div className="flex w-2/3 flex-col p-16 space-y-2">
           <div className="text-4xl font-bold">Course Title</div>
           <div className="">
             Course descriptionCourse descriptionCourse descriptionCourse
@@ -43,12 +43,15 @@ export default function DetailedCourse() {
           <div className="">
             <div className="text-2xl font-bold">Curriculum</div>
             <Accordion>
-              <AccordionItem title="Accordion 1">content 1</AccordionItem>
-              <AccordionItem title="Accordion 2">content 2</AccordionItem>
-              <AccordionItem title="Accordion 3">content 3</AccordionItem>
+              <AccordionItem title="Starting course">content 1</AccordionItem>
+              <AccordionItem title="Learning course">content 2</AccordionItem>
+              <AccordionItem title="Ending course">content 3</AccordionItem>
             </Accordion>
           </div>
+          <LearnerReview />
+          <LearnerReview />
         </div>
+
       </div>
       {/*right*/}
       <div>
@@ -56,7 +59,6 @@ export default function DetailedCourse() {
       </div>
       <div className={"flex justify-around"}>
       </div>
-      <LearnerReview />
     </div>
   );
 }
