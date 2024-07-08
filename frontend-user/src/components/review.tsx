@@ -27,7 +27,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   })
 }));
 
-export default function LearnerReview() {
+export default function Review() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {

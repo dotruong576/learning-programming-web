@@ -1,5 +1,5 @@
 'use client';
-import LearnerReview from '~/components/learnerReview';
+import Review from '~/components/review';
 import { Accordion, AccordionItem } from '@nextui-org/react';
 import Button from '@mui/material/Button';
 import { Rating } from '@mui/material';
@@ -73,8 +73,8 @@ export default function DetailedCourse() {
                 <div>6</div></AccordionItem>
             </Accordion>
           </div>
-          <LearnerReview />
-          <LearnerReview />
+          <Review />
+          <Review />
         </div>
 
       </div>
