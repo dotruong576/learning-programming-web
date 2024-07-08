@@ -1,14 +1,14 @@
 "use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { redirect } from "next/navigation";
 
 const HomePage: React.FC = () => {
-  const router = useRouter();
 
-  useEffect(() => {
-    router.push('/login');
-  });
-
-  return <main></main>;
+    const token = localStorage.getItem('jwtToken');
+    if (token) {
+      redirect('/main/dashboard');
+    } else {
+      redirect('/login');
+    };
 }
+
 export default HomePage;

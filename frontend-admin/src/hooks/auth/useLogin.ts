@@ -16,9 +16,10 @@ const useLogin = (config?: Partial<UseMutationOptions<string, TError, TAuthLogin
     mutationKey: [QUERY_KEY.LOGIN],
     mutationFn: postLogin,
     onSuccess(_data, _key, _config) {
+      localStorage.setItem('jwtToken', _data);
       toast('Đăng nhập thành công');
       refetch();
-      router.push('/');
+      router.push('/main/dashboard');
     },
     onError(_err, _key, _config) {
       const msg = parseErrorMessage(_err, {
