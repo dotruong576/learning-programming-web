@@ -22,7 +22,7 @@ const LessonCommentSection = () => {
 
   return (
     <div className="flex flex-col mx-32">
-      <h2 className="text-2xl font-bold my-8">Đánh giá</h2>
+      <h2 className="text-2xl font-bold my-8">Reviews</h2>
       <PostCommentComponent
         uploadNewComment={(newComment: TCUCommentResponse) => {
           setComments((prev) => {

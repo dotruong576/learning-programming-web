@@ -5,7 +5,7 @@ const routePath = {
   LESSON_DETAIL: '/course/[courseId]/lesson/[lessonId]',
   NOT_FOUND: '/404',
   FORBIDDEN: '/403',
-  EDIT: '/edit',
+  EDIT: '/editProfile',
 };
 
 export default routePath;

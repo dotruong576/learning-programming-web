@@ -35,7 +35,7 @@ const PostCommentComponent = ({ canRating = false, uploadNewComment, courseId, l
           className="w-full"
           disabled={!isLogin}
           variant="outlined"
-          placeholder={!isLogin ? 'Vui lòng đăng nhập để bình luận.' : 'Nhập bình luận...'}
+          placeholder={!isLogin ? 'Please login to comment.' : 'Input comment...'}
         />
         <div className="flex items-center justify-between mt-3">
           {canRating && (
