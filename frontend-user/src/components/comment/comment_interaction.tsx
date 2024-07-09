@@ -22,7 +22,6 @@ const CommentInteraction = ({
   isCurrentUserLike,
   numberOfDislikes: _numberOfDislikes,
   numberOfLikes: _numberOfLikes,
-  numberOfReplies,
   _id: commentId,
 }: Pick<
   ICommentComponentProps,
@@ -187,7 +186,7 @@ export const CommentMenu = ({
             }
           }}
         >
-          <DeleteOutlinedIcon /> Xoá bình luận
+          <DeleteOutlinedIcon /> Deleted review
         </MenuItem>
       </Menu>
     </>

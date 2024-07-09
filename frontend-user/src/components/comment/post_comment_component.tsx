@@ -64,7 +64,7 @@ const PostCommentComponent = ({ canRating = false, uploadNewComment, courseId, l
               variant="contained"
               disabled={!content || (canRating && !rating)}
             >
-              Đăng
+              Post
             </Button>
           </LoadingButtonProvider>
         </div>

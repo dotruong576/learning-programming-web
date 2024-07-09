@@ -32,7 +32,8 @@
     "src/api/firebase.jtsx",
     "src/api/firebaseConfig.js",
     "src/api/auth/signup.js",
-    "src/api/firebase.js"
+    "src/api/firebase.js",
+    "src/hooks/userLessons"
   ],
   "exclude": ["node_modules"]
 }

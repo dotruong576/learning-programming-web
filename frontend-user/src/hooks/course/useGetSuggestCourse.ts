@@ -12,6 +12,7 @@ export type TGetSuggestCourseResponse = {
   cover: string;
   participantsId: { userId: string; participatedDate: string }[];
   createdAt: string;
+  rating: number;
 };
 
 const useGetSuggestCourse = (
