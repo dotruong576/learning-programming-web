@@ -11,7 +11,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-import NoteAltIcon from "@mui/icons-material/NoteAlt";
 import HomeIcon from "@mui/icons-material/Home";
 import { Notifications } from "@mui/icons-material";
 import PersonIcon from "@mui/icons-material/Person";
@@ -52,7 +51,7 @@ export default function SideMenu() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton href="/main/course">
               <ListItemIcon>
                 <MenuBookIcon />
               </ListItemIcon>
@@ -60,11 +59,11 @@ export default function SideMenu() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton href="/main/user">
               <ListItemIcon>
-                <NoteAltIcon />
+                <PersonIcon />
               </ListItemIcon>
-              <ListItemText primary="Test" />
+              <ListItemText primary="Users" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
