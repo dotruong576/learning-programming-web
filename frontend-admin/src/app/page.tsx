@@ -1,5 +1,14 @@
+"use client";
 import { redirect } from "next/navigation";
-export default function Home() {
-  redirect('/signin');
-  return null;
+
+const HomePage: React.FC = () => {
+
+    const token = localStorage.getItem('jwtToken');
+    if (token) {
+      redirect('/main/dashboard');
+    } else {
+      redirect('/login');
+    };
 }
+
+export default HomePage;

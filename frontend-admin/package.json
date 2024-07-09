@@ -9,12 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@heroicons/react": "^2.1.4",
+    "@mui/icons-material": "^5.16.0",
+    "@mui/material": "^5.16.0",
+    "@mui/x-charts": "^7.9.0",
+    "@tanstack/react-query": "^5.50.1",
+    "@tanstack/react-query-devtools": "^5.50.1",
     "axios": "^1.7.2",
+    "framer-motion": "^11.2.13",
+    "moment": "^2.30.1",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-toastify": "^10.0.5"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.50.1",
     "@types/axios": "^0.14.0",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -22,6 +34,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

@@ -5,5 +5,8 @@
   "scripts": {
     "postinstall": "(cd backend && npm install) && (cd ../frontend-user && npm install) && (cd ../frontend-admin && npm install)",
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "@tanstack/react-query-devtools": "^5.50.1"
   }
 }
