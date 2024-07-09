@@ -1,3 +1,15 @@
+## This backend use `EXPRESSJS`, `MONGOOES` with `MONGODB` and `TYPESCRIPT`
+
+## Starting the application
+
+`Advice`: you should stand in the main dir to install package, not this backend sub-folder to have husky checking commit and frontend node_modules.
+
+```console
+$ cp .env.example .env
+$ npm install
+$ npm run dev
+```
+
 ## Project Structure
 
 This is basic guidance to read the project structure
@@ -21,4 +33,12 @@ This is basic guidance to read the project structure
 - `types`: defines types for anything
   - `api`: use for api folder such as response type
   - `schema`: types for schema, also use for define validate object.
-- `.env.example`: define enviroment variables
+- `.env.example`: define enviroment variables, run command:
+
+```console
+$ cp .env.example .env
+```
+
+- `index.ts`: main entrypoint start the application.
+
+Others files is use for cleaing code style and convention.

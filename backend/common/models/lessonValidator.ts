@@ -1,21 +1,21 @@
-import { ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
+import { ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
 import {
-  CodescriptLessonResourse,
-  SelectionLessonResourse,
-  VideoLessonResourse,
-} from '../../types/schema/lessonSchemaTypes';
+  TCodescriptLessonResourse,
+  TSelectionLessonResourse,
+  TVideoLessonResourse,
+} from '../../types/schema/lesson.schema.types';
 
-export const codescriptLessonResourceValidator = (_value: CodescriptLessonResourse[]) => {
+export const codescriptLessonResourceValidator = (_value: TCodescriptLessonResourse[]) => {
   return (
     Array.isArray(_value) && _value.every((item) => typeof item.input === 'string' && typeof item.expected === 'string')
   );
 };
 
-export const videoLessonResourceValidator = (_value: VideoLessonResourse) => {
+export const videoLessonResourceValidator = (_value: TVideoLessonResourse) => {
   return typeof _value.file === 'string' && typeof _value.duration === 'string';
 };
 
-export const selectionLessonResourceValidator = (_value: SelectionLessonResourse[]) => {
+export const selectionLessonResourceValidator = (_value: TSelectionLessonResourse[]) => {
   return (
     Array.isArray(_value) &&
     _value.every(

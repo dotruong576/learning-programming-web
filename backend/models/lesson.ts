@@ -4,13 +4,13 @@ import {
   selectionLessonResourceValidator,
   videoLessonResourceValidator,
 } from '../common/models/lessonValidator';
-import { ELessonType } from '../constant/enum/lessonEnum';
-import { TLessonDocument } from '../types/documentTypes';
+import { ELessonType } from '../constant/enum/lesson.enum';
+import { TLessonDocument } from '../types/document.types';
 import {
-  CodescriptLessonResourse,
-  SelectionLessonResourse,
-  VideoLessonResourse,
-} from '../types/schema/lessonSchemaTypes';
+  TCodescriptLessonResourse,
+  TSelectionLessonResourse,
+  TVideoLessonResourse,
+} from '../types/schema/lesson.schema.types';
 
 const lessonSchema = new Schema<TLessonDocument>(
   {
@@ -50,15 +50,15 @@ const lessonSchema = new Schema<TLessonDocument>(
         const _this = this as unknown as TLessonDocument;
 
         if (_this.type === ELessonType.CodeScript) {
-          return codescriptLessonResourceValidator(value as CodescriptLessonResourse[]);
+          return codescriptLessonResourceValidator(value as TCodescriptLessonResourse[]);
         }
 
         if (_this.type === ELessonType.Video) {
-          return videoLessonResourceValidator(value as VideoLessonResourse);
+          return videoLessonResourceValidator(value as TVideoLessonResourse);
         }
 
         if (_this.type === ELessonType.Selection) {
-          return selectionLessonResourceValidator(value as SelectionLessonResourse[]);
+          return selectionLessonResourceValidator(value as TSelectionLessonResourse[]);
         }
       },
     },

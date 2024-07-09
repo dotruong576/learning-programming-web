@@ -3,7 +3,7 @@ import { JsonWebTokenError, NotBeforeError, TokenExpiredError } from 'jsonwebtok
 import mongoose from 'mongoose';
 import AppError from '../constant/error';
 import { EHttpStatus } from '../constant/statusCode';
-import { TServiceResponseBodyType, TServiceResponseType } from '../types/generalTypes';
+import { TServiceResponseBodyType, TServiceResponseType } from '../types/general.types';
 
 const tryCatchWrapper =
   <T>(promise: (req: Request, res: Response, next: NextFunction) => Promise<TServiceResponseType<T>>) =>

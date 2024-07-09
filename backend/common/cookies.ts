@@ -1,6 +1,6 @@
 import { CookieOptions, Response } from 'express';
-import { EAuthCookiesKey } from '../constant/enum/authEnum';
-import { ReturnJWTType } from './signJWT';
+import { EAuthCookiesKey } from '../constant/enum/auth.enum';
+import { TReturnJWTType } from './signJWT';
 
 export const sendToClientCookieOptions = (expires: string): CookieOptions => ({
   maxAge: parseInt(expires) * 1000, //convert from seconds to milliseconds
@@ -9,7 +9,7 @@ export const sendToClientCookieOptions = (expires: string): CookieOptions => ({
   secure: true,
 });
 
-export const sendAuthCookieToClient = (res: Response, authCredentials: { token: ReturnJWTType }) => {
+export const sendAuthCookieToClient = (res: Response, authCredentials: { token: TReturnJWTType }) => {
   const { token } = authCredentials;
   res.cookie(EAuthCookiesKey.Token, token.token, sendToClientCookieOptions(token.expires));
   return res;

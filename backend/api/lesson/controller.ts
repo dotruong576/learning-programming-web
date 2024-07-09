@@ -1,6 +1,6 @@
 import { Request } from 'express';
 import { tryCatchWrapper } from '../../common/catchError';
-import lessonServices from './services';
+import lessonServices from './service';
 
 const lessonControllers = {
   createLesson: tryCatchWrapper((req: Request) => lessonServices.createLesson(req)),

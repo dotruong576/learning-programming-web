@@ -1,11 +1,11 @@
-import { ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
+import { ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
 import {
-  UserCodescriptLessonCheckpoint,
-  UserSelectionLessonCheckpoint,
-  UserVideoLessonCheckpoint,
-} from '../../types/schema/userLessonSchemaTypes';
+  TUserCodescriptLessonCheckpoint,
+  TUserSelectionLessonCheckpoint,
+  TUserVideoLessonCheckpoint,
+} from '../../types/schema/userLessons.schema.types';
 
-export const codescriptUserLessonCheckpointValidator = (_value: UserCodescriptLessonCheckpoint) => {
+export const codescriptUserLessonCheckpointValidator = (_value: TUserCodescriptLessonCheckpoint) => {
   return (
     typeof _value.code === 'string' &&
     Array.isArray(_value.result) &&
@@ -13,11 +13,11 @@ export const codescriptUserLessonCheckpointValidator = (_value: UserCodescriptLe
   );
 };
 
-export const videoUserLessonCheckpointValidator = (_value: UserVideoLessonCheckpoint) => {
+export const videoUserLessonCheckpointValidator = (_value: TUserVideoLessonCheckpoint) => {
   return typeof _value.lastViewMoment === 'string';
 };
 
-export const selectionLessonResourceValidator = (_value: UserSelectionLessonCheckpoint[]) => {
+export const selectionLessonResourceValidator = (_value: TUserSelectionLessonCheckpoint[]) => {
   return (
     Array.isArray(_value) &&
     _value.every(

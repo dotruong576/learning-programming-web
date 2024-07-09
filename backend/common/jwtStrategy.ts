@@ -2,11 +2,11 @@ import { Request } from 'express';
 import passportJWT from 'passport-jwt';
 import { catchError } from '../common/catchError';
 import config from '../config';
-import { EAuthCookiesKey } from '../constant/enum/authEnum';
+import { EAuthCookiesKey } from '../constant/enum/auth.enum';
 import AppError from '../constant/error';
 import { EHttpStatus } from '../constant/statusCode';
 import UserModel from '../models/user';
-import { JWTVerify } from '../types/api/authTypes';
+import { TJWTVerify } from '../types/api/auth.types';
 
 const generateJWTStrategy = () => {
   return new passportJWT.Strategy(
@@ -17,7 +17,7 @@ const generateJWTStrategy = () => {
       secretOrKey: config.jwt.secret,
       algorithms: [config.JWTAlgorithm],
     },
-    async function (jwtPayload: JWTVerify, done) {
+    async function (jwtPayload: TJWTVerify, done) {
       try {
         const user = await UserModel.findById(jwtPayload.id);
         if (user) {

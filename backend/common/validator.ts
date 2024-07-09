@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { AnyObject, ObjectSchema, ValidationError } from 'yup';
 import { EHttpStatus } from '../constant/statusCode';
-import { TValidatorResponseBodyType } from '../types/generalTypes';
+import { TValidatorResponseBodyType } from '../types/general.types';
 
 export const objectValidateOverride = <T extends AnyObject>(dto: ObjectSchema<T>, data: T) =>
   dto.validate(data, {

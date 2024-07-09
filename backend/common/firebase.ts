@@ -23,7 +23,7 @@ export const uploadImage = async (filePath: string) => {
         }
         const blob = await response.blob();
 
-        const storageRef = ref(storage, 'gs://learning-programing-web.appspot.com/image' + getFileNameFromPath(filePath));
+        const storageRef = ref(storage, 'gs://learning-programing-web.appspot.com/image/' + getFileNameFromPath(filePath));
         await uploadBytes(storageRef, blob);
 
         const downloadURL = await getDownloadURL(storageRef);
@@ -58,4 +58,5 @@ const getFileNameFromPath = (filePath: string) => {
     return filePath.split('/').pop() || 'file';
 };
 
- export { storage, ref, uploadBytes, getDownloadURL };
+export { getDownloadURL, ref, storage, uploadBytes };
+

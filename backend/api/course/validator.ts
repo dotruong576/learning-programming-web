@@ -1,7 +1,7 @@
 import { ObjectSchema, array, object, string } from 'yup';
 import validateWrapper, { objectValidateOverride } from '../../common/validator';
-import { ECourseStatus } from '../../constant/enum/courseEnum';
-import { TCourseById, TCoursePayload, TGetCourseNavigatePayload, TUpdateCourse } from '../../types/api/courseTypes';
+import { ECourseStatus } from '../../constant/enum/course.enum';
+import { TCourseById, TCoursePayload, TGetCourseNavigatePayload, TUpdateCourse } from '../../types/api/course.types';
 
 const postCourseObjectValidate: ObjectSchema<Omit<TCoursePayload, 'status'>> = object({
   title: string().required(),

@@ -1,15 +1,15 @@
 import { Request, Response } from 'express';
 import { catchError, tryCatchWrapper } from '../../common/catchError';
 import { removeAuthCookieFromClient, sendAuthCookieToClient } from '../../common/cookies';
-import { TLoginRequest, TRegisterRequest } from '../../types/api/authTypes';
-import { TServiceResponseBodyType } from '../../types/generalTypes';
-import authServices from './services';
+import { TLocalLoginPayload, TRegisterPayload } from '../../types/api/auth.types';
+import { TServiceResponseBodyType } from '../../types/general.types';
+import authServices from './service';
 
 const authController = {
   loginWithEmailAndPassword: async (req: Request, res: Response<TServiceResponseBodyType>) => {
     try {
       const { data, statusCode, message } = await authServices.loginWithEmailAndPassword(
-        req.body as TLoginRequest,
+        req.body as TLocalLoginPayload,
       );
       sendAuthCookieToClient(res, data).status(statusCode).json({ data: null, message });
     } catch (error) {
@@ -17,7 +17,7 @@ const authController = {
       res.status(errorObject.statusCode).json({ data: errorObject.data, message: errorObject.message });
     }
   },
-  register: tryCatchWrapper((req: Request) => authServices.register(req.body as TRegisterRequest)),
+  register: tryCatchWrapper((req: Request) => authServices.register(req.body as TRegisterPayload)),
   logout: (_req: Request, res: Response) => {
     const { message, statusCode, data } = authServices.logout();
     removeAuthCookieFromClient(res).status(statusCode).json({ data, message });

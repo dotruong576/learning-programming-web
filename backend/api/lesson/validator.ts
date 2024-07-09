@@ -1,12 +1,12 @@
 import { ObjectSchema, array, mixed, object, string } from 'yup';
 import validateWrapper, { objectValidateOverride } from '../../common/validator';
-import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
-import { TCreateLessonPayload, TLessonById } from '../../types/api/lessonTypes';
+import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
+import { TCreateLessonPayload, TLessonById } from '../../types/api/lesson.types';
 import {
-  CodescriptLessonResourse,
-  SelectionLessonResourse,
-  VideoLessonResourse,
-} from '../../types/schema/lessonSchemaTypes';
+  TCodescriptLessonResourse,
+  TSelectionLessonResourse,
+  TVideoLessonResourse,
+} from '../../types/schema/lesson.schema.types';
 
 const postLessonResultParamsObjectValidate: ObjectSchema<{
   type: ELessonType;
@@ -14,7 +14,7 @@ const postLessonResultParamsObjectValidate: ObjectSchema<{
   type: mixed<ELessonType>().oneOf(Object.values(ELessonType)).required(),
 });
 
-const postVideoLessonObjectValidate: ObjectSchema<TCreateLessonPayload<VideoLessonResourse>> = object({
+const postVideoLessonObjectValidate: ObjectSchema<TCreateLessonPayload<TVideoLessonResourse>> = object({
   courseId: string().required().trim(),
   title: string().required(),
   description: string().required(),
@@ -24,7 +24,7 @@ const postVideoLessonObjectValidate: ObjectSchema<TCreateLessonPayload<VideoLess
   }).required('Video Resource is required'),
 });
 
-const postCodeScriptLessonObjectValidate: ObjectSchema<TCreateLessonPayload<CodescriptLessonResourse[]>> = object({
+const postCodeScriptLessonObjectValidate: ObjectSchema<TCreateLessonPayload<TCodescriptLessonResourse[]>> = object({
   courseId: string().required().trim(),
   title: string().required(),
   description: string().required(),
@@ -38,7 +38,7 @@ const postCodeScriptLessonObjectValidate: ObjectSchema<TCreateLessonPayload<Code
     .required('CodeScript Resource is required'),
 });
 
-const postSelectionLessonObjectValidate: ObjectSchema<TCreateLessonPayload<SelectionLessonResourse[]>> = object({
+const postSelectionLessonObjectValidate: ObjectSchema<TCreateLessonPayload<TSelectionLessonResourse[]>> = object({
   courseId: string().required().trim(),
   title: string().required(),
   description: string().required(),
@@ -67,18 +67,18 @@ const lessonValidator = {
     objectValidateOverride(postLessonResultParamsObjectValidate, req.query),
   ),
   validateVideoLesson: validateWrapper((req) =>
-    objectValidateOverride(postVideoLessonObjectValidate, req.body as TCreateLessonPayload<VideoLessonResourse>),
+    objectValidateOverride(postVideoLessonObjectValidate, req.body as TCreateLessonPayload<TVideoLessonResourse>),
   ),
   validateCodescriptLesson: validateWrapper((req) =>
     objectValidateOverride(
       postCodeScriptLessonObjectValidate,
-      req.body as TCreateLessonPayload<CodescriptLessonResourse[]>,
+      req.body as TCreateLessonPayload<TCodescriptLessonResourse[]>,
     ),
   ),
   validateSelectionLesson: validateWrapper((req) =>
     objectValidateOverride(
       postSelectionLessonObjectValidate,
-      req.body as TCreateLessonPayload<SelectionLessonResourse[]>,
+      req.body as TCreateLessonPayload<TSelectionLessonResourse[]>,
     ),
   ),
   validateLessonById: validateWrapper((req) =>

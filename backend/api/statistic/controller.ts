@@ -1,5 +1,5 @@
 import { tryCatchWrapper } from '../../common/catchError';
-import statisticService from './services';
+import statisticService from './service';
 
 const statisticController = {
   getAllCourseStatistic: tryCatchWrapper(() => statisticService.getAllCourse()),

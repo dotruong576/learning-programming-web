@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from 'express';
-import { EUserRole } from '../constant/enum/userEnum';
+import { EUserRole } from '../constant/enum/user.enum';
 import AppError from '../constant/error';
 import { EHttpStatus } from '../constant/statusCode';
-import { TUserRole } from '../types/api/authTypes';
-import { TCommentsDocument, TCourseDocument } from '../types/documentTypes';
+import { TUserMiddlewareParse } from '../types/api/auth.types';
+import { TCommentsDocument, TCourseDocument } from '../types/document.types';
 
 export const userRolePermissionMiddleware =
   (roleAccess: EUserRole[] = [EUserRole.Admin, EUserRole.Student]) =>
@@ -14,7 +14,7 @@ export const userRolePermissionMiddleware =
       return;
     }
 
-    if (roleAccess.includes((req.user as TUserRole).role)) {
+    if (roleAccess.includes((req.user as TUserMiddlewareParse).role)) {
       next();
       return;
     }
@@ -31,7 +31,7 @@ export const userJoinedCoursePermissionMiddleware = async (course: TCourseDocume
 };
 
 export const userIsOwnerOfCommentMiddleware = async (req: Request, comment: TCommentsDocument) => {
-  const user = req.user as TUserRole;
+  const user = req.user as TUserMiddlewareParse;
   if (comment.userId !== user.id) {
     throw new AppError(EHttpStatus.FORBIDDEN, 'You is not owner of this comment');
   }

@@ -1,5 +1,5 @@
 import express from 'express';
-import { EUserRole } from '../../constant/enum/userEnum';
+import { EUserRole } from '../../constant/enum/user.enum';
 import authenticateMiddleware, { nonStrictAuthenticateMiddleware } from '../../middleware/auth';
 import { userRolePermissionMiddleware } from '../../middleware/permissionAccess';
 import courseControllers from './controller';

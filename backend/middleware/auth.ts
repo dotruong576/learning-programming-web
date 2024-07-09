@@ -2,11 +2,11 @@ import { NextFunction, Request, Response } from 'express';
 import passport from 'passport';
 import generateJWTStrategy from '../common/jwtStrategy';
 import { EHttpStatus } from '../constant/statusCode';
-import { TUserRole } from '../types/api/authTypes';
+import { TUserMiddlewareParse } from '../types/api/auth.types';
 
 const authenticateMiddleware = (req: Request, res: Response, next: NextFunction) => {
   passport.use(generateJWTStrategy());
-  passport.authenticate('jwt', { session: false }, (err: Error, user: TUserRole) => {
+  passport.authenticate('jwt', { session: false }, (err: Error, user: TUserMiddlewareParse) => {
     if (err) {
       return next(err);
     }
@@ -23,7 +23,7 @@ export default authenticateMiddleware;
 
 export const nonStrictAuthenticateMiddleware = (req: Request, res: Response, next: NextFunction) => {
   passport.use(generateJWTStrategy());
-  passport.authenticate('jwt', { session: false }, (err: Error, user: TUserRole) => {
+  passport.authenticate('jwt', { session: false }, (err: Error, user: TUserMiddlewareParse) => {
     if (err) {
       return next(err);
     }

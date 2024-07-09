@@ -1,10 +1,10 @@
-import { TUserRole } from '../types/api/authTypes';
-import { TCUCommentResponse } from '../types/api/commentTypes';
-import { TCommentsDocument, TUserDocument } from '../types/documentTypes';
+import { TUserMiddlewareParse } from '../types/api/auth.types';
+import { TCUCommentResponse } from '../types/api/comments.types';
+import { TCommentsDocument, TUserDocument } from '../types/document.types';
 
 export const generateCommentResponse = (
   comment: TCommentsDocument,
-  user: TUserRole | undefined,
+  user: TUserMiddlewareParse | undefined,
   ownerComment: TUserDocument,
 ): TCUCommentResponse => {
   return {
