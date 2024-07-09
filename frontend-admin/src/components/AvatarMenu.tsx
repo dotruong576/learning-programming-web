@@ -1,11 +1,18 @@
-import * as React from 'react';
+'use client';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import useLogout from '~/hooks/auth/useLogout';
 import Avatar from '@mui/material/Avatar';
+import { useRouter } from 'next/navigation';
+import routePath from '~/constant/routePath';
+import React, { useContext } from 'react';
+import { userContext } from '~/context/UserContext';
 import { Box, IconButton, Tooltip } from '@mui/material';
 
+
 export default function AvatarMenu() {
+  const { isLogin: auth, data } = useContext(userContext);
+  const router = useRouter();
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -26,7 +33,7 @@ export default function AvatarMenu() {
       <Box sx={{ flexGrow: 0 }}>
         <Tooltip title="Open settings">
           <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+          <Avatar alt="Remy Sharp" src={data ? data.avatar : '~/public/avatar.png'} />
           </IconButton>
         </Tooltip>
         <Menu
@@ -45,7 +52,12 @@ export default function AvatarMenu() {
           open={Boolean(anchorElUser)}
           onClose={handleCloseUserMenu}
         >
-          <MenuItem onClick={handleCloseUserMenu}>Profile</MenuItem>
+          <MenuItem
+                onClick={() => {
+                  router.push(routePath.EDIT);
+                  handleCloseUserMenu();
+                }}
+              >Profile</MenuItem>
           <MenuItem onClick={handleCloseUserMenu}>Setting</MenuItem>
           <MenuItem onClick={handleLogout}>Sign out</MenuItem>
         </Menu>

@@ -19,7 +19,7 @@ const useLogin = (config?: Partial<UseMutationOptions<string, TError, TAuthLogin
       localStorage.setItem('jwtToken', _data);
       toast('Đăng nhập thành công');
       refetch();
-      router.push('/main/dashboard');
+      router.push('/');
     },
     onError(_err, _key, _config) {
       const msg = parseErrorMessage(_err, {
