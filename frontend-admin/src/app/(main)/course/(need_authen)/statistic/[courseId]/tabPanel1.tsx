@@ -24,7 +24,7 @@ const TabPanel1 = ({ courseId }: { courseId: string }) => {
               <Table sx={{ minWidth: 700 }} aria-label="customized table">
                 <TableHead>
                   <TableRow>
-                    <TableCell align="center">STT</TableCell>
+                    <TableCell align="center">No.</TableCell>
                     <TableCell>Lesson</TableCell>
                     <TableCell align="center">Time</TableCell>
                     <TableCell align="center">Created date</TableCell>
