@@ -8,7 +8,7 @@ import upload from '../../loader/multer';
 
 const fileRoute = express.Router();
 
-fileRoute.post('/images', upload.single('file'), async (req, res) => {
+fileRoute.post('/image', upload.single('file'), async (req, res) => {
   const file = req.file;
 
   if (!file) {
@@ -32,7 +32,7 @@ fileRoute.post('/images', upload.single('file'), async (req, res) => {
   }
 });
 
-fileRoute.post('/videos', upload.single('file'), async (req, res) => {
+fileRoute.post('/video', upload.single('file'), async (req, res) => {
   const file = req.file;
 
   if (!file) {
