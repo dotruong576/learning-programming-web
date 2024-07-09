@@ -1,5 +1,5 @@
-import SideMenu from "~/components/sideMenu";
 import Navbar from "~/components/navbar";
+
 export default function MainPageLayout({
   children,
 }: {

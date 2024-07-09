@@ -4,7 +4,7 @@ import { IAllCouresResponse } from "~/types/api/courseTypes";
 import CourseCount from "~/components/totalCourse";
 import UserCount from "~/components/totalUser";
 import LanguagePie from "~/components/languageChart";
-import Navbar from "~/components/navbar";
+import SideMenu from "~/components/sideMenu";
 
 const HomePage: React.FC = async () => {
   let data: IAllCouresResponse[] = [];
@@ -16,12 +16,15 @@ const HomePage: React.FC = async () => {
   }
 
   return (
-    <div className={"flex w-full flex-col space-y-8"}>
-      <div className={"flex flex-row"}>
-        <CourseCount />
-        <UserCount />
+    <div className="flex flex-row">
+      <SideMenu />
+      <div className={"flex w-full flex-col space-y-8"}>
+        <div className={"flex flex-row"}>
+          <CourseCount />
+          <UserCount />
+        </div>
+        <LanguagePie />
       </div>
-      <LanguagePie />
     </div>
   );
 };

@@ -37,7 +37,7 @@ export default function SideMenu() {
         variant="permanent"
         anchor="left"
       >
-        <div className="flex h-1/6 select-none items-center justify-center text-center align-middle font-sans text-3xl font-bold text-black">
+        <div className="flex select-none items-center justify-center py-6 text-center align-middle font-sans text-2xl font-bold text-black">
           pro<span className="text-blue-600">c</span>ode
         </div>
         <Divider />
