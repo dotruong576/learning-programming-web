@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { userContext } from '~/context/UserContext';
 import useCourseDetail from '~/hooks/course/useCourseDetail';
 import useJoinCourse from '~/hooks/course/useJoinCourse';
+import LessonComponent from './lesson/lesson_component';
 
 const CourseInformationComponent = ({ courseId }: { courseId: string }) => {
   const { data, isSuccess, refetch } = useCourseDetail(courseId, {});
@@ -55,7 +56,7 @@ const CourseInformationComponent = ({ courseId }: { courseId: string }) => {
 
           <h2 className="text-2xl font-bold mt-10 mb-4">Nội dung khoá học</h2>
           <div className="grid grid-rows-[repeat(auto-fit,minmax(auto,1fr))] gap-y-3 max-h-[420px] overflow-y-auto">
-            {/* {data?.lessons.map((item, index) => (
+            {data?.lessons.map((item, index) => (
               <div key={index}>
                 <LessonComponent
                   id={item._id}
@@ -65,7 +66,7 @@ const CourseInformationComponent = ({ courseId }: { courseId: string }) => {
                   status={item.status}
                 />
               </div>
-            ))} */}
+            ))}
           </div>
         </div>
       </div>
