@@ -14,6 +14,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import HomeIcon from "@mui/icons-material/Home";
 import { Notifications } from "@mui/icons-material";
 import PersonIcon from "@mui/icons-material/Person";
+import { QUERY_KEY } from "~/constant/reactQueryKey";
 
 const drawerWidth = 240;
 
@@ -43,7 +44,7 @@ export default function SideMenu() {
         <Divider />
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton href="/main">
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -51,7 +52,7 @@ export default function SideMenu() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton href="/main/course">
+            <ListItemButton  href="/main/course/statistic">
               <ListItemIcon>
                 <MenuBookIcon />
               </ListItemIcon>

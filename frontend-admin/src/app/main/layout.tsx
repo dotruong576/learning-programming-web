@@ -1,5 +1,5 @@
 import Navbar from "~/components/navbar";
-
+import SideMenu from "~/components/sideMenu";
 export default function MainPageLayout({
   children,
 }: {
@@ -8,7 +8,10 @@ export default function MainPageLayout({
   return (
     <div className={"flex flex-col"}>
       <Navbar />
+      <SideMenu />
       {children}
     </div>
+
+    
   );
 }
