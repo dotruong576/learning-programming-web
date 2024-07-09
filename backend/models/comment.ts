@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { TCommentsDocument } from '../types/document.types';
+import { TCommentsDocument } from '../types/documentTypes';
 
 const { Schema } = mongoose;
 

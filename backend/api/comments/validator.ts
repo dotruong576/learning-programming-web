@@ -9,7 +9,7 @@ import {
   TGetRepliesByCommentId,
   TUpdateCommentPayload,
   TUpdateLikeAndDislike,
-} from '../../types/api/comments.types';
+} from '../../types/api/commentsTypes';
 
 const createCommentObjectValidate: ObjectSchema<TCreateCommentPayload> = object({
   rating: number(),

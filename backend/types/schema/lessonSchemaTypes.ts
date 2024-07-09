@@ -1,4 +1,4 @@
-import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
+import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
 
 export type TLessonResource = TVideoLessonResourse | TSelectionLessonResourse[] | TCodescriptLessonResourse[];
 

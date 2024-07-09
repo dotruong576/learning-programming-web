@@ -1,4 +1,4 @@
-import { TCourseDocument, TLessonDocument, TUserLessonDocument } from '../document.types';
+import { TCourseDocument, TLessonDocument, TUserLessonDocument } from '../documentTypes';
 
 export type TCoursePayload = Pick<
   TCourseDocument,

@@ -1,6 +1,6 @@
-import { TUserMiddlewareParse } from '../types/api/auth.types';
-import { TCUCommentResponse } from '../types/api/comments.types';
-import { TCommentsDocument, TUserDocument } from '../types/document.types';
+import { TUserMiddlewareParse } from '../types/api/authTypes';
+import { TCUCommentResponse } from '../types/api/commentsTypes';
+import { TCommentsDocument, TUserDocument } from '../types/documentTypes';
 
 export const generateCommentResponse = (
   comment: TCommentsDocument,

@@ -1,4 +1,4 @@
-import { TUserSchema } from '../schema/user.schema.types';
+import { TUserSchema } from '../schema/userSchemaTypes';
 
 export type TLocalLoginPayload = Pick<TUserSchema, 'email' | 'password'>;
 

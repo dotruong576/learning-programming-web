@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response } from 'express';
-import { EUserRole } from '../constant/enum/user.enum';
+import { EUserRole } from '../constant/enum/userEnum';
 import AppError from '../constant/error';
 import { EHttpStatus } from '../constant/statusCode';
-import { TUserMiddlewareParse } from '../types/api/auth.types';
-import { TCommentsDocument, TCourseDocument } from '../types/document.types';
+import { TUserMiddlewareParse } from '../types/api/authTypes';
+import { TCommentsDocument, TCourseDocument } from '../types/documentTypes';
 
 export const userRolePermissionMiddleware =
   (roleAccess: EUserRole[] = [EUserRole.Admin, EUserRole.Student]) =>

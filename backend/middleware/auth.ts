@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express';
 import passport from 'passport';
 import generateJWTStrategy from '../common/jwtStrategy';
 import { EHttpStatus } from '../constant/statusCode';
-import { TUserMiddlewareParse } from '../types/api/auth.types';
+import { TUserMiddlewareParse } from '../types/api/authTypes';
 
 const authenticateMiddleware = (req: Request, res: Response, next: NextFunction) => {
   passport.use(generateJWTStrategy());

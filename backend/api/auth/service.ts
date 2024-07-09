@@ -3,8 +3,8 @@ import { TReturnJWTType, signJWT } from '../../common/signJWT';
 import AppError from '../../constant/error';
 import { EHttpStatus } from '../../constant/statusCode';
 import UserModel from '../../models/user';
-import { TLocalLoginPayload, TRegisterPayload, TUserMiddlewareParse } from '../../types/api/auth.types';
-import { TServiceResponseType } from '../../types/general.types';
+import { TLocalLoginPayload, TRegisterPayload, TUserMiddlewareParse } from '../../types/api/authTypes';
+import { TServiceResponseType } from '../../types/generalTypes';
 
 const authServices = {
   register: async (reqBody: TRegisterPayload): Promise<TServiceResponseType<string | null>> => {

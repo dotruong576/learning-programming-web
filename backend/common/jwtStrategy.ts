@@ -2,11 +2,11 @@ import { Request } from 'express';
 import passportJWT from 'passport-jwt';
 import { catchError } from '../common/catchError';
 import config from '../config';
-import { EAuthCookiesKey } from '../constant/enum/auth.enum';
+import { EAuthCookiesKey } from '../constant/enum/authEnum';
 import AppError from '../constant/error';
 import { EHttpStatus } from '../constant/statusCode';
 import UserModel from '../models/user';
-import { TJWTVerify } from '../types/api/auth.types';
+import { TJWTVerify } from '../types/api/authTypes';
 
 const generateJWTStrategy = () => {
   return new passportJWT.Strategy(

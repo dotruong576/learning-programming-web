@@ -1,12 +1,12 @@
 import { ObjectSchema, array, mixed, object, string } from 'yup';
 import validateWrapper, { objectValidateOverride } from '../../common/validator';
-import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
-import { TCreateLessonPayload, TLessonById } from '../../types/api/lesson.types';
+import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
+import { TCreateLessonPayload, TLessonById } from '../../types/api/lessonTypes';
 import {
   TCodescriptLessonResourse,
   TSelectionLessonResourse,
   TVideoLessonResourse,
-} from '../../types/schema/lesson.schema.types';
+} from '../../types/schema/lessonSchemaTypes';
 
 const postLessonResultParamsObjectValidate: ObjectSchema<{
   type: ELessonType;

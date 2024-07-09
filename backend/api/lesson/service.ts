@@ -1,11 +1,11 @@
 import { Request } from 'express';
-import { ELessonType } from '../../constant/enum/lesson.enum';
+import { ELessonType } from '../../constant/enum/lessonEnum';
 import AppError from '../../constant/error';
 import { EHttpStatus } from '../../constant/statusCode';
 import CourseModel from '../../models/course';
 import LessonModel from '../../models/lesson';
-import { TCreateLessonPayload, TLessonById } from '../../types/api/lesson.types';
-import { TLessonResource, TVideoLessonResourse } from '../../types/schema/lesson.schema.types';
+import { TCreateLessonPayload, TLessonById } from '../../types/api/lessonTypes';
+import { TLessonResource, TVideoLessonResourse } from '../../types/schema/lessonSchemaTypes';
 
 const lessonServices = {
   createLesson: async (req: Request) => {

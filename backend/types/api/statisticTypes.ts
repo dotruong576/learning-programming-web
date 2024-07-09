@@ -1,4 +1,4 @@
-import { TCourseDocument, TLessonDocument, TUserDocument, TUserLessonDocument } from '../document.types';
+import { TCourseDocument, TLessonDocument, TUserDocument, TUserLessonDocument } from '../documentTypes';
 
 export type TGetAllCourseStatisticResponse = Pick<
   TCourseDocument,

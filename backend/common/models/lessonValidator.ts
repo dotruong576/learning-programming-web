@@ -1,9 +1,9 @@
-import { ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
+import { ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
 import {
   TCodescriptLessonResourse,
   TSelectionLessonResourse,
   TVideoLessonResourse,
-} from '../../types/schema/lesson.schema.types';
+} from '../../types/schema/lessonSchemaTypes';
 
 export const codescriptLessonResourceValidator = (_value: TCodescriptLessonResourse[]) => {
   return (

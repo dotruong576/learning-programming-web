@@ -1,9 +1,9 @@
-import { ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
+import { ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
 import {
   TUserCodescriptLessonCheckpoint,
   TUserSelectionLessonCheckpoint,
   TUserVideoLessonCheckpoint,
-} from '../../types/schema/userLessons.schema.types';
+} from '../../types/schema/userLessonsSchemaTypes';
 
 export const codescriptUserLessonCheckpointValidator = (_value: TUserCodescriptLessonCheckpoint) => {
   return (

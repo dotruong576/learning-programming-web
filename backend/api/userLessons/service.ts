@@ -1,7 +1,7 @@
 import { Request } from 'express';
 import moment from 'moment';
 import { Script, createContext } from 'node:vm';
-import { ELessonType, EUserLessonStatus } from '../../constant/enum/lesson.enum';
+import { ELessonType, EUserLessonStatus } from '../../constant/enum/lessonEnum';
 import AppError from '../../constant/error';
 import { EHttpStatus } from '../../constant/statusCode';
 import {
@@ -11,7 +11,7 @@ import {
 } from '../../middleware/exists';
 import { userJoinedCoursePermissionMiddleware } from '../../middleware/permissionAccess';
 import UserLessonModel from '../../models/userLessons';
-import { TUserMiddlewareParse } from '../../types/api/auth.types';
+import { TUserMiddlewareParse } from '../../types/api/authTypes';
 import {
   TGetResultLesson,
   TGetResultLessonResponse,
@@ -20,10 +20,10 @@ import {
   TUserSelectionLessonCheckpointResponse,
   TUserSelectionLessonResultSubmit,
   TUserVideoLessonResultSubmit,
-} from '../../types/api/userLesson.types';
-import { TServiceResponseType } from '../../types/general.types';
-import { TCodescriptLessonResourse, TSelectionLessonResourse } from '../../types/schema/lesson.schema.types';
-import { TUserSelectionLessonCheckpoint } from '../../types/schema/userLessons.schema.types';
+} from '../../types/api/userLessonTypes';
+import { TServiceResponseType } from '../../types/generalTypes';
+import { TCodescriptLessonResourse, TSelectionLessonResourse } from '../../types/schema/lessonSchemaTypes';
+import { TUserSelectionLessonCheckpoint } from '../../types/schema/userLessonsSchemaTypes';
 
 const userLessonService = {
   postResultVideoLesson: async (req: Request) => {

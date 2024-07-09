@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 import { catchError, tryCatchWrapper } from '../../common/catchError';
 import { removeAuthCookieFromClient, sendAuthCookieToClient } from '../../common/cookies';
-import { TLocalLoginPayload, TRegisterPayload } from '../../types/api/auth.types';
-import { TServiceResponseBodyType } from '../../types/general.types';
+import { TLocalLoginPayload, TRegisterPayload } from '../../types/api/authTypes';
+import { TServiceResponseBodyType } from '../../types/generalTypes';
 import authServices from './service';
 
 const authController = {

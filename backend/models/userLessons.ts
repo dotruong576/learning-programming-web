@@ -4,14 +4,14 @@ import {
   selectionLessonResourceValidator,
   videoUserLessonCheckpointValidator,
 } from '../common/models/userLessonValidator';
-import { ELessonType, EUserLessonStatus } from '../constant/enum/lesson.enum';
-import { TUserLessonDocument } from '../types/document.types';
+import { ELessonType, EUserLessonStatus } from '../constant/enum/lessonEnum';
+import { TUserLessonDocument } from '../types/documentTypes';
 import {
   TUserCodescriptLessonCheckpoint,
   TUserLessonSchema,
   TUserSelectionLessonCheckpoint,
   TUserVideoLessonCheckpoint,
-} from '../types/schema/userLessons.schema.types';
+} from '../types/schema/userLessonsSchemaTypes';
 
 const { Schema } = mongoose;
 

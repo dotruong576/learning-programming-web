@@ -1,13 +1,13 @@
 import { ObjectSchema, array, mixed, object, string } from 'yup';
 import validateWrapper, { objectValidateOverride } from '../../common/validator';
-import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
+import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
 import {
   TGetResultLesson,
   TSubmitLessonResult,
   TUserCodescriptLessonResultSubmit,
   TUserSelectionLessonResultSubmit,
   TUserVideoLessonResultSubmit,
-} from '../../types/api/userLesson.types';
+} from '../../types/api/userLessonTypes';
 
 const postSubmitVideoLessonResultObjectValidate: ObjectSchema<TSubmitLessonResult<TUserVideoLessonResultSubmit>> =
   object({

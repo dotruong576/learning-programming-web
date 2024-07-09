@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import { ECourseStatus } from '../constant/enum/course.enum';
-import { TCourseDocument } from '../types/document.types';
+import { ECourseStatus } from '../constant/enum/courseEnum';
+import { TCourseDocument } from '../types/documentTypes';
 
 const { Schema } = mongoose;
 

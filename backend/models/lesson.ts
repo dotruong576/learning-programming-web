@@ -4,13 +4,13 @@ import {
   selectionLessonResourceValidator,
   videoLessonResourceValidator,
 } from '../common/models/lessonValidator';
-import { ELessonType } from '../constant/enum/lesson.enum';
-import { TLessonDocument } from '../types/document.types';
+import { ELessonType } from '../constant/enum/lessonEnum';
+import { TLessonDocument } from '../types/documentTypes';
 import {
   TCodescriptLessonResourse,
   TSelectionLessonResourse,
   TVideoLessonResourse,
-} from '../types/schema/lesson.schema.types';
+} from '../types/schema/lessonSchemaTypes';
 
 const lessonSchema = new Schema<TLessonDocument>(
   {

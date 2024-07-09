@@ -1,7 +1,7 @@
 import { ObjectSchema, object, string } from 'yup';
 import validateWrapper, { objectValidateOverride } from '../../common/validator';
 import { EMAIL_REGEX, PASSWORD_REGEX } from '../../constant/regex';
-import { TLocalLoginPayload, TRegisterPayload } from '../../types/api/auth.types';
+import { TLocalLoginPayload, TRegisterPayload } from '../../types/api/authTypes';
 
 const localLoginObjectValidate: ObjectSchema<TLocalLoginPayload> = object({
   email: string().required().trim().matches(EMAIL_REGEX, { message: 'email format is invalid' }),

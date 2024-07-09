@@ -1,4 +1,4 @@
-import { TLessonResource } from '../schema/lesson.schema.types';
+import { TLessonResource } from '../schema/lessonSchemaTypes';
 
 export type TLessonById = {
   lessonId: string;

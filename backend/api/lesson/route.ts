@@ -1,6 +1,6 @@
 import express from 'express';
-import { ELessonType } from '../../constant/enum/lesson.enum';
-import { EUserRole } from '../../constant/enum/user.enum';
+import { ELessonType } from '../../constant/enum/lessonEnum';
+import { EUserRole } from '../../constant/enum/userEnum';
 import { userRolePermissionMiddleware } from '../../middleware/permissionAccess';
 import lessonController from './controller';
 import lessonValidator from './validator';

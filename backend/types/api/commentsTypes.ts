@@ -1,4 +1,4 @@
-import { TCommentsDocument, TUserDocument } from '../document.types';
+import { TCommentsDocument, TUserDocument } from '../documentTypes';
 
 export type TCreateCommentPayload = {
   rating?: number;

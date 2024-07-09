@@ -4,15 +4,15 @@ import AppError from '../../constant/error';
 import { PASSWORD_REGEX } from '../../constant/regex';
 import { EHttpStatus } from '../../constant/statusCode';
 import UserModel from '../../models/user';
-import { TUserMiddlewareParse } from '../../types/api/auth.types';
+import { TUserMiddlewareParse } from '../../types/api/authTypes';
 import {
   TGetUserDetailByEmail,
   TGetUserDetailById,
   TGetUserDetailDataResponse,
   TUpdateProfileUser,
-} from '../../types/api/user.types';
-import { TServiceResponseType } from '../../types/general.types';
-import { TUserSchema } from '../../types/schema/user.schema.types';
+} from '../../types/api/userTypes';
+import { TServiceResponseType } from '../../types/generalTypes';
+import { TUserSchema } from '../../types/schema/userSchemaTypes';
 
 const userService = {
   createUser: async (req: TUserSchema): Promise<TServiceResponseType<TGetUserDetailDataResponse | null>> => {

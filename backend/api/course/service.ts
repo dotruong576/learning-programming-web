@@ -1,23 +1,23 @@
 import { Request } from 'express';
-import { ECourseStatus } from '../../constant/enum/course.enum';
-import { EUserLessonStatus } from '../../constant/enum/lesson.enum';
-import { EUserRole } from '../../constant/enum/user.enum';
+import { ECourseStatus } from '../../constant/enum/courseEnum';
+import { EUserLessonStatus } from '../../constant/enum/lessonEnum';
+import { EUserRole } from '../../constant/enum/userEnum';
 import AppError from '../../constant/error';
 import { EHttpStatus } from '../../constant/statusCode';
 import { courseExistsMiddleware } from '../../middleware/exists';
 import CourseModel from '../../models/course';
 import LessonModel from '../../models/lesson';
 import UserLessonModel from '../../models/userLessons';
-import { TUserMiddlewareParse } from '../../types/api/auth.types';
+import { TUserMiddlewareParse } from '../../types/api/authTypes';
 import {
   TCourseById,
   TCoursePayload,
   TGetCourseByIdResponse,
   TGetCourseNavigatePayload,
   TGetCourseNavigateResponse,
-} from '../../types/api/course.types';
-import { TServiceResponseType } from '../../types/general.types';
-import { TCourseSchema } from '../../types/schema/course.schema.types';
+} from '../../types/api/courseTypes';
+import { TServiceResponseType } from '../../types/generalTypes';
+import { TCourseSchema } from '../../types/schema/courseSchemaTypes';
 
 const courseServices = {
   changeStatus: async (req: Request): Promise<TServiceResponseType<null>> => {

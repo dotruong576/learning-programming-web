@@ -1,7 +1,7 @@
 import { ObjectSchema, object, string } from 'yup';
 import validateWrapper, { objectValidateOverride } from '../../common/validator';
 import { EMAIL_REGEX } from '../../constant/regex';
-import { TGetUserDetailByEmail, TGetUserDetailById, TUpdateProfileUser } from '../../types/api/user.types';
+import { TGetUserDetailByEmail, TGetUserDetailById, TUpdateProfileUser } from '../../types/api/userTypes';
 
 const getUserDetailByIdObjectValidate: ObjectSchema<TGetUserDetailById> = object({
   userId: string().required().trim(),

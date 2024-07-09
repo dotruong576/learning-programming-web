@@ -1,9 +1,9 @@
 import mongoose, { Document } from 'mongoose';
-import { TCommentSchema } from './schema/comment.schema.types';
-import { TCourseSchema } from './schema/course.schema.types';
-import { TLessonResource, TLessonSchema } from './schema/lesson.schema.types';
-import { TUserSchema } from './schema/user.schema.types';
-import { TUserLessonSchema } from './schema/userLessons.schema.types';
+import { TCommentSchema } from './schema/commentSchemaTypes';
+import { TCourseSchema } from './schema/courseSchemaTypes';
+import { TLessonResource, TLessonSchema } from './schema/lessonSchemaTypes';
+import { TUserSchema } from './schema/userSchemaTypes';
+import { TUserLessonSchema } from './schema/userLessonsSchemaTypes';
 
 export type TDocument<T> = Document<unknown, object, T> &
   T & {

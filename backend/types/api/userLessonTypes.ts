@@ -1,5 +1,5 @@
-import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lesson.enum';
-import { TUserLessonSchema } from '../schema/userLessons.schema.types';
+import { ELessonType, ESelectionAnswerChoiceList } from '../../constant/enum/lessonEnum';
+import { TUserLessonSchema } from '../schema/userLessonsSchemaTypes';
 
 export type TSubmitLessonResult<T> = {
   lessonId: string;

@@ -1,5 +1,5 @@
 import { CookieOptions, Response } from 'express';
-import { EAuthCookiesKey } from '../constant/enum/auth.enum';
+import { EAuthCookiesKey } from '../constant/enum/authEnum';
 import { TReturnJWTType } from './signJWT';
 
 export const sendToClientCookieOptions = (expires: string): CookieOptions => ({

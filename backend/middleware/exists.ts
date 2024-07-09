@@ -4,7 +4,7 @@ import { EHttpStatus } from '../constant/statusCode';
 import CommentsModel from '../models/comment';
 import CourseModel from '../models/course';
 import LessonModel from '../models/lesson';
-import { TCommentsDocument, TCourseDocument, TLessonDocument } from '../types/document.types';
+import { TCommentsDocument, TCourseDocument, TLessonDocument } from '../types/documentTypes';
 
 export const lessonExistsMiddleware = async (req: Request): Promise<TLessonDocument> => {
   const lessonId = req.body.lessonId || req.query.lessonId || req.params.lessonId;

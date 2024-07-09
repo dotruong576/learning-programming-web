@@ -1,4 +1,4 @@
-import { ECourseStatus } from '../../constant/enum/course.enum';
+import { ECourseStatus } from '../../constant/enum/courseEnum';
 
 export type TCourseSchema = {
   title: string;

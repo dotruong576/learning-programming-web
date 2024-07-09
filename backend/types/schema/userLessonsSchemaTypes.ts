@@ -1,4 +1,4 @@
-import { ELessonType, ESelectionAnswerChoiceList, EUserLessonStatus } from '../../constant/enum/lesson.enum';
+import { ELessonType, ESelectionAnswerChoiceList, EUserLessonStatus } from '../../constant/enum/lessonEnum';
 
 export type TUserLessonSchema = {
   userId: string;

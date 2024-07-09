@@ -5,7 +5,7 @@ import { commentExistsMiddleware, courseExistsMiddleware, lessonExistsMiddleware
 import { userIsOwnerOfCommentMiddleware } from '../../middleware/permissionAccess';
 import CommentsModel from '../../models/comment';
 import UserModel from '../../models/user';
-import { TUserMiddlewareParse } from '../../types/api/auth.types';
+import { TUserMiddlewareParse } from '../../types/api/authTypes';
 import {
   EUpdateLikeAndDislikeAction,
   TCUCommentResponse,
@@ -14,9 +14,9 @@ import {
   TGetRepliesByCommentId,
   TUpdateCommentPayload,
   TUpdateLikeAndDislike,
-} from '../../types/api/comments.types';
-import { TUserDocument } from '../../types/document.types';
-import { TServiceResponseType } from '../../types/general.types';
+} from '../../types/api/commentsTypes';
+import { TUserDocument } from '../../types/documentTypes';
+import { TServiceResponseType } from '../../types/generalTypes';
 
 const commentsService = {
   createNewComment: async (req: Request): Promise<TServiceResponseType<TCUCommentResponse>> => {

@@ -3,7 +3,7 @@ import validateWrapper, { objectValidateOverride } from '../../common/validator'
 import {
   TGetDetailStatisticMemberOfCourseRequest,
   TGetDetailStatisticOfCourseRequest,
-} from '../../types/api/statistic.types';
+} from '../../types/api/statisticTypes';
 
 const getDetailStatisticOfCourseObjectValidate: ObjectSchema<TGetDetailStatisticOfCourseRequest> = object({
   courseId: string().required().trim(),

@@ -1,6 +1,6 @@
 import jsonWebToken from 'jsonwebtoken';
 import config from '../config';
-import { TJWTPayload } from '../types/api/auth.types';
+import { TJWTPayload } from '../types/api/authTypes';
 
 export type TReturnJWTType = {
   token: string;

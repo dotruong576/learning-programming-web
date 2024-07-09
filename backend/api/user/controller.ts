@@ -1,7 +1,7 @@
 import { Request } from 'express';
 import { tryCatchWrapper } from '../../common/catchError';
-import { TUserMiddlewareParse } from '../../types/api/auth.types';
-import { TGetUserDetailByEmail, TGetUserDetailById } from '../../types/api/user.types';
+import { TUserMiddlewareParse } from '../../types/api/authTypes';
+import { TGetUserDetailByEmail, TGetUserDetailById } from '../../types/api/userTypes';
 import userService from './service';
 
 const userController = {

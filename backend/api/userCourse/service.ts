@@ -1,11 +1,11 @@
 import { Request } from 'express';
-import { ECourseStatus } from '../../constant/enum/course.enum';
+import { ECourseStatus } from '../../constant/enum/courseEnum';
 import AppError from '../../constant/error';
 import { EHttpStatus } from '../../constant/statusCode';
 import CourseModel from '../../models/course';
 import UserModel from '../../models/user';
-import { TUserMiddlewareParse } from '../../types/api/auth.types';
-import { TCourseId, TCourseTitle, TUserAndCourseById } from '../../types/api/userCourse';
+import { TUserMiddlewareParse } from '../../types/api/authTypes';
+import { TCourseId, TCourseTitle, TUserAndCourseById } from '../../types/api/userCourseTypes';
 // import { Date } from 'mongoose';
 const userCourseServices = {
   userJoinCourseById: async (req: Request) => {

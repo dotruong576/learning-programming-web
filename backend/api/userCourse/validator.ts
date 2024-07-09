@@ -1,6 +1,6 @@
 import { ObjectSchema, object, string } from 'yup';
 import validateWrapper, { objectValidateOverride } from '../../common/validator';
-import { TCourseId, TCourseTitle, TUserAndCourseById } from '../../types/api/userCourse';
+import { TCourseId, TCourseTitle, TUserAndCourseById } from '../../types/api/userCourseTypes';
 
 const postUserAndCourseByIdObjectValidate: ObjectSchema<TUserAndCourseById> = object({
   courseId: string().required(),

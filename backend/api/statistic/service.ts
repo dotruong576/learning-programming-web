@@ -1,5 +1,5 @@
 import { Request } from 'express';
-import { ELessonType, EUserLessonStatus } from '../../constant/enum/lesson.enum';
+import { ELessonType, EUserLessonStatus } from '../../constant/enum/lessonEnum';
 import { EHttpStatus } from '../../constant/statusCode';
 import { courseExistsMiddleware } from '../../middleware/exists';
 import { userJoinedCoursePermissionMiddleware } from '../../middleware/permissionAccess';
@@ -13,13 +13,13 @@ import {
   TGetAllMembersOfCourseStatisticResponse,
   TGetDetailStatisticMemberOfCourseRequest,
   TGetMemberOfCourseStatisticResponse,
-} from '../../types/api/statistic.types';
-import { TServiceResponseType } from '../../types/general.types';
-import { TCodescriptLessonResourse, TSelectionLessonResourse } from '../../types/schema/lesson.schema.types';
+} from '../../types/api/statisticTypes';
+import { TServiceResponseType } from '../../types/generalTypes';
+import { TCodescriptLessonResourse, TSelectionLessonResourse } from '../../types/schema/lessonSchemaTypes';
 import {
   TUserCodescriptLessonCheckpoint,
   TUserSelectionLessonCheckpoint,
-} from '../../types/schema/userLessons.schema.types';
+} from '../../types/schema/userLessonsSchemaTypes';
 
 const statisticService = {
   getAllCourse: async (): Promise<TServiceResponseType<TGetAllCourseStatisticResponse[]>> => {

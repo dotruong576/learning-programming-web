@@ -1,5 +1,5 @@
 import express from 'express';
-import { ELessonType } from '../../constant/enum/lesson.enum';
+import { ELessonType } from '../../constant/enum/lessonEnum';
 import userLessonController from './controller';
 import userLessonValidator from './validator';
 

@@ -1,4 +1,4 @@
-import { EUserRole } from '../../constant/enum/user.enum';
+import { EUserRole } from '../../constant/enum/userEnum';
 
 export type TUserSchema = {
   email: string;
