@@ -18,7 +18,7 @@ export default function Navbar() {
         {/* logo */}
         <div
           onClick={() => {
-            router.push("/main/mainpage");
+            router.push("/");
           }}
           className="h-full select-none place-content-center pl-8 font-sans text-3xl font-bold text-black hover:cursor-pointer"
         >
