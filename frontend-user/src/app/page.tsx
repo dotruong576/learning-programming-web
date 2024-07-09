@@ -6,7 +6,7 @@ const HomePage: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/main/mainpage');
+    router.push('/main');
   });
 
   return <main></main>;
