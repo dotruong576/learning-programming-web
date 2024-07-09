@@ -1,12 +1,12 @@
 "use client";
-import React, { useContext } from 'react';
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import { useRouter } from 'next/navigation';
-import { userContext } from '~/context/UserContext';
-import DropdownMenu from '~/components/dropdownMenuNavbar';
-import AvatarMenu from '~/components/AvatarMenu';
-import Button from '@mui/material/Button';
-import Link from '@mui/material/Link';
+import React, { useContext } from "react";
+import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/navigation";
+import { userContext } from "~/context/UserContext";
+import DropdownMenu from "~/components/dropdownMenuNavbar";
+import AvatarMenu from "~/components/AvatarMenu";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 
 export default function Navbar() {
   const router = useRouter();
