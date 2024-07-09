@@ -7,7 +7,7 @@ export default function MainPageLayout({
   return (
     <section>
       <Navbar/>
-      {children}
+      <div className="pt-10vh">{children}</div>
     </section>
   );
 }

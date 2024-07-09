@@ -13,7 +13,7 @@ export default function Navbar() {
   const { isLogin: auth, data } = useContext(userContext);
 
   return (
-    <nav className="flex h-10vh w-full items-center justify-between space-x-8 bg-main-color">
+    <nav className="flex h-10vh w-full items-center justify-between space-x-8 bg-main-color fixed z-10">
       <div className="flex items-center space-x-8">
         {/* logo */}
         <div

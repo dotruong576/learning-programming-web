@@ -21,6 +21,9 @@ const config: Config = {
       backgroundColor: {
         "main-color": "#EAFAFF",
       },
+      padding: {
+        '10vh': '10vh',
+      },
     },
   },
   plugins: [],

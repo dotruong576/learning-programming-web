@@ -29,8 +29,8 @@ const Courses_Thumbnail: React.FC<CourseComponentProps> = ({ id, image, name, ra
   };
   
   return (
-    <div className="relative rounded-2xl max-w-80 m-4" onClick={onClickCourse}>
-      <Card sx={{ maxWidth: 320, maxHeight: 320 }}>
+    <div className="relative rounded-2xl p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 overflow-hidden"  onClick={onClickCourse}>
+      <Card className="h-full relative">
           <CardMedia
             component="img"
             image={image || "/default_img.png"} 
@@ -44,7 +44,7 @@ const Courses_Thumbnail: React.FC<CourseComponentProps> = ({ id, image, name, ra
             <MenuItem>
               <ListItemIcon>
                 <People fontSize="small" />
-                <span className="text-sm ml-1"> {views} Lượt xem</span>
+                <span className="text-sm ml-1"> {views} views</span>
               </ListItemIcon>
             </MenuItem>
             <MenuItem>
