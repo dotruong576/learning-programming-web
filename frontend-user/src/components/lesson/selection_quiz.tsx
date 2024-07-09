@@ -97,12 +97,12 @@ export default function SelectionQuiz({
                 variant="contained"
                 className="!w-fit"
               >
-                Nộp bài
+                Submit
               </Button>
             </LoadingButtonProvider>
           ) : (
             <Button onClick={() => setMode('take')} variant="contained" className="!w-fit">
-              Làm lại
+              Redo Exercise
             </Button>
           )}
         </div>
@@ -114,7 +114,7 @@ export default function SelectionQuiz({
           <div className="flex-1 text-base px-6">
             {mode === 'review' && (
               <>
-                <p className="font-semibold">Giải thích: </p>
+                <p className="font-semibold">Explan: </p>
                 <p className="font-normal">{questtionList[currentQues].explanation}</p>
               </>
             )}

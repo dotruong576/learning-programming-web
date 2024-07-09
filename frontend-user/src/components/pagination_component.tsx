@@ -53,7 +53,7 @@ const PaginationComponent = () => {
           }
           className="flex items-center text-base font-medium"
         >
-          Bài học trước
+          Previous
         </Button>
         <Button
           endIcon={<ArrowForwardIosIcon fontSize="small"></ArrowForwardIosIcon>}
@@ -71,7 +71,7 @@ const PaginationComponent = () => {
           }
           className="flex items-center text-base font-medium"
         >
-          Bài học sau
+          Next 
         </Button>
       </div>
       <div className="absolute right-5 top-1/2 transform -translate-y-1/2">

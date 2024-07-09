@@ -20,7 +20,7 @@ const LessonsListComponent = ({ lessons }: { lessons: TGetCourseNavigateResponse
         variant="outlined"
         className="flex items-center text-base font-medium"
       >
-        Danh sách bài học
+        Curriculum
       </Button>
 
       <Drawer
@@ -35,7 +35,7 @@ const LessonsListComponent = ({ lessons }: { lessons: TGetCourseNavigateResponse
           <IconButton className="!absolute top-1/2 transform -translate-y-1/2 left-3 " onClick={toggleDrawer}>
             <CloseIcon />
           </IconButton>
-          <h2 className="text-textMain text-2xl">Danh sách bài học</h2>
+          <h2 className="text-textMain text-2xl">Curriculum</h2>
         </div>
         <div className="grid grid-rows-[repeat(auto-fit,minmax(auto,1fr))] gap-y-2 my-5 px-3">
           {lessons.map((item, index) => (

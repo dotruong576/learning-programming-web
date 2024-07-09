@@ -33,17 +33,19 @@ const CourseInformationComponent = ({ courseId }: { courseId: string }) => {
             <div className="mx-auto flex flex-col gap-3 items-center">
               {!data.isCurrentUserJoined && (
                 <Button disabled={!isLogin} onClick={() => mutate(courseId)} className="!w-fit" variant="contained">
-                  Tham gia khoá học
+                  Join Course
                 </Button>
               )}
               <div className="flex flex-col gap-y-3 my-3 ">
                 <p>
-                  <b>Tổng số bài học:</b> {data?.lessons.length}
+                  <b>Total Lesson:</b> {data?.lessons.length}
                 </p>
                 <p>
-                  <b>Tổng số người tham gia:</b> {data?.totalJoined}
+                  <b>Total learner:</b> {data?.totalJoined}
                 </p>
-                <Rating className="mx-auto" name="comment-rating" value={data.rating} precision={0.5} readOnly />
+                <div className="flex font-semibold align-middle">
+                <Rating className="mx-auto mr-2" name="comment-rating" value={data.rating} precision={0.5} readOnly /> {data.rating}
+                </div>
               </div>
             </div>
           </div>
@@ -54,7 +56,7 @@ const CourseInformationComponent = ({ courseId }: { courseId: string }) => {
 
           <label htmlFor="des-courses">{data?.description}</label>
 
-          <h2 className="text-2xl font-bold mt-10 mb-4">Nội dung khoá học</h2>
+          <h2 className="text-2xl font-bold mt-10 mb-4">Curriculum</h2>
           <div className="grid grid-rows-[repeat(auto-fit,minmax(auto,1fr))] gap-y-3 max-h-[420px] overflow-y-auto">
             {data?.lessons.map((item, index) => (
               <div key={index}>

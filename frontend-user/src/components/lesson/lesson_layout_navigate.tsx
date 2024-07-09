@@ -23,7 +23,7 @@ export const LessonLayoutBackButton = () => {
       }
     >
       <ArrowBackIcon />
-      Trở về khoá học
+      Return course
     </div>
   );
 };

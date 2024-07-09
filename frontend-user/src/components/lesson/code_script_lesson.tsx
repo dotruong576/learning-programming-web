@@ -74,7 +74,7 @@ const CodeScriptLesson = ({ resource }: { resource: TCodescriptLessonResourse[] 
           variant="outlined"
           className="monaco-editor !mt-3 relative !bg-[var(--vscode-editorGutter-background)]"
         >
-          Thực thi
+          Run
         </Button>
       </div>
 

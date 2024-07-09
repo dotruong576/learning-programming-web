@@ -61,7 +61,7 @@ const courseServices = {
   },
   getAllCourse: async () => {
     const courses = await CourseModel.find({ status: ECourseStatus.Publish }, {}, { timestamps: true })
-      .select(['title', 'description', 'cover', 'participantsId', 'createdAt'])
+      .select(['title', 'description', 'cover', 'participantsId', 'createdAt', 'rating'])
       .then((item) =>
         item.map((course) => ({
           _id: course._id,
@@ -69,6 +69,7 @@ const courseServices = {
           description: course.description,
           cover: course.cover,
           createdAt: course.createdAt,
+          rating: course.rating,
           totalJoined: course.participantsId.length || 0,
         })),
       );
