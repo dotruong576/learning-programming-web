@@ -59,7 +59,7 @@ const SelectionQuestion: React.FC<SelectionQuestionProps> = ({
             id="panel1a-header"
             className="flex-auto"
           >
-            <Typography>Bài {id}</Typography>
+            <Typography>Question {id}</Typography>
           </AccordionSummary>
           <button onClick={clickDelete}>
             <CancelIcon className="mr-3"></CancelIcon>
@@ -68,7 +68,7 @@ const SelectionQuestion: React.FC<SelectionQuestionProps> = ({
         <AccordionDetails>
           <div className="flex-col flex space-y-4 md:pr-7 md:pl-7 md:pb-7">
             <TextField
-              label="Câu hỏi"
+              label="Question"
               name="title"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
@@ -76,7 +76,7 @@ const SelectionQuestion: React.FC<SelectionQuestionProps> = ({
               required
             />
             <TextField
-              label="Giải thích"
+              label="Explain"
               name="description"
               value={explanation}
               onChange={(e) => setExplanation(e.target.value)}
@@ -94,7 +94,7 @@ const SelectionQuestion: React.FC<SelectionQuestionProps> = ({
                 />
                 <span className="mr-3">{item.index}.</span>
                 <TextField
-                  label={`Đáp án ${item.index}`}
+                  label={`Answer ${item.index}`}
                   name={`title_${item.index}`}
                   sx={{ width: '100%' }}
                   value={item.content}

@@ -57,7 +57,7 @@ const EditLesson = ({ lessonId, onSuccess = () => {} }: { lessonId?: string; onS
     return (
       <div className="flex-col flex space-y-4 p-7 w-full">
         <TextField
-          label="Tiêu đề bài học"
+          label="Lesson title"
           name="title"
           value={lessonTitle}
           onChange={(e) => setLessonTitle(e.target.value)}
@@ -65,7 +65,7 @@ const EditLesson = ({ lessonId, onSuccess = () => {} }: { lessonId?: string; onS
           required
         />
         <TextField
-          label="Mô tả bài học"
+          label="lesson description"
           name="description"
           value={lessonDescription}
           onChange={(e) => setLessonDescription(e.target.value)}
@@ -75,13 +75,13 @@ const EditLesson = ({ lessonId, onSuccess = () => {} }: { lessonId?: string; onS
         <div className="md:w-1/3 w-2/3">
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label" required>
-              Loại bài giảng
+              Type of lesson
             </InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={typeLesson}
-              label="Loại bài giảng"
+              label="Type of lesson"
               onChange={handleChange}
               required
             >

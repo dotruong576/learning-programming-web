@@ -104,7 +104,7 @@ function EditVideoLesson({
         sx={{ textTransform: 'none' }}
         onClick={() => fileInputRef.current?.click()}
       >
-        Tải lên video bài giảng
+        upload lesson video
       </Button>
       {selectedVideo ? (
         <div>
@@ -115,7 +115,7 @@ function EditVideoLesson({
       )}
       <LoadingButtonProvider className="w-fit" isLoading={isPending || isMutating}>
         <Button disabled={!prevInformation || !selectedVideo} variant="contained" size="small" onClick={onSave}>
-          Lưu
+          Save
         </Button>
       </LoadingButtonProvider>
 
@@ -147,7 +147,7 @@ function EditCodeScriptLesson({ handleSubmit, prevInformation, isMutating }: Omi
 
         handleSubmit(data as TCodescriptLessonResourse[]);
       } catch (err) {
-        toast('File tải lên chứa thông tin sai định dạng.', {
+        toast('File is not in the correct format', {
           type: 'error',
         });
       } finally {
@@ -166,8 +166,8 @@ function EditCodeScriptLesson({ handleSubmit, prevInformation, isMutating }: Omi
         ref={fileInputRef}
       />
 
-      <span>Upload file json để tạo danh sách testcase cho bài giảng code script.</span>
-      <span>File json phải có nội dung như file mẫu dưới đây.</span>
+      <span>Upload the json file to create a list of test cases for the code script lecture.</span>
+      <span>The json file must have the same content as the sample file below.</span>
       <div className="flex-col space-y-3">
         <Button
           startIcon={<SaveAltOutlinedIcon />}
@@ -175,7 +175,7 @@ function EditCodeScriptLesson({ handleSubmit, prevInformation, isMutating }: Omi
           sx={{ textTransform: 'none' }}
           onClick={() => downloadFunc('/files/sample_testcase.json')}
         >
-          Tải xuống mẫu test case
+          download sample test case
         </Button>
         <br></br>
         <Button
@@ -185,14 +185,14 @@ function EditCodeScriptLesson({ handleSubmit, prevInformation, isMutating }: Omi
           sx={{ textTransform: 'none' }}
           onClick={() => fileInputRef.current?.click()}
         >
-          Tải lên mẫu test case
+          Upload sample test case
         </Button>
       </div>
-      <span>Tên file sau khi upload</span>
+      <span>file name</span>
       <div>
         <LoadingButtonProvider className="w-fit" isLoading={isMutating || isLoading}>
           <Button disabled={!prevInformation || !selectedFile} variant="contained" size="small" onClick={onSave}>
-            Lưu
+            Save
           </Button>
         </LoadingButtonProvider>
       </div>
@@ -240,7 +240,7 @@ function EditSelectionLesson({
             size="small"
             onClick={onSave}
           >
-            Lưu
+            Save
           </Button>
         </LoadingButtonProvider>
       </div>
@@ -275,7 +275,7 @@ function EditSelectionLesson({
             startIcon={<AddIcon />}
             sx={{ textTransform: 'none' }}
           >
-            Thêm câu hỏi
+            Add question
           </Button>
         </div>
       </div>

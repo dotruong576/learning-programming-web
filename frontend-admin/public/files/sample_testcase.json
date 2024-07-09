@@ -1,0 +1,18 @@
+[
+  {
+    "input": "number",
+    "expected": "number"
+  },
+  {
+    "input": "123",
+    "expected": "123"
+  },
+  {
+    "input": "string",
+    "expected": "string"
+  },
+  {
+    "input": "sample",
+    "expected": "sample"
+  }
+]

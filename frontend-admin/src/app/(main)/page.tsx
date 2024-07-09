@@ -1,18 +1,18 @@
 "use client";
-import { getAllCourses } from "~/api/courses";
-import { IAllCouresResponse } from "~/types/api/courseTypes";
 import CourseCount from "~/components/totalCourse";
 import UserCount from "~/components/totalUser";
 import LanguagePie from "~/components/languageChart";
+import { useEffect } from 'react';
+import { redirect } from 'next/navigation';
 
 const HomePage: React.FC = async () => {
-  let data: IAllCouresResponse[] = [];
 
-  try {
-    data = await getAllCourses();
-  } catch (error) {
-    data = [];
-  }
+  useEffect(() => {
+    const token = localStorage.getItem('jwtToken');
+    if (!token) {
+      redirect('/login');
+    }
+  });
 
   return (
     <div className="flex flex-row">

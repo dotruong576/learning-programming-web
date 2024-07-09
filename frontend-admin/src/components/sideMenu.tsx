@@ -44,7 +44,7 @@ export default function SideMenu() {
         <Divider />
         <List>
           <ListItem disablePadding>
-            <ListItemButton href="/main">
+            <ListItemButton href="/">
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -52,7 +52,7 @@ export default function SideMenu() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton  href="/main/course/statistic">
+            <ListItemButton  href="/course/statistic">
               <ListItemIcon>
                 <MenuBookIcon />
               </ListItemIcon>
@@ -60,7 +60,7 @@ export default function SideMenu() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton href="/main/user">
+            <ListItemButton href="/user">
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
