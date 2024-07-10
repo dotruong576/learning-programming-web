@@ -7,6 +7,7 @@ import DropdownMenu from "~/components/dropdownMenuNavbar";
 import AvatarMenu from "~/components/AvatarMenu";
 import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
+import SearchComponent from "./search_component";
 
 export default function Navbar() {
   const router = useRouter();
@@ -28,10 +29,11 @@ export default function Navbar() {
         <DropdownMenu />
 
         {/* search box */}
-        <div className="flex grow items-center space-x-4 rounded-md bg-white p-2.5">
+        {/* <div className="flex grow items-center space-x-4 rounded-md bg-white p-2.5">
           <MagnifyingGlassIcon className="h-5" />
           <input type="text" placeholder="Search" className="outline-none" />
-        </div>
+        </div> */}
+        <SearchComponent></SearchComponent>
       </div>
       {/*user logo, sign up, log in*/}
       <div>
