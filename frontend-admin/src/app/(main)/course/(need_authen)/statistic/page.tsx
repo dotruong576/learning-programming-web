@@ -87,6 +87,7 @@ const CourseStatistics: React.FC = () => {
               </TableBody>
             </Table>
           </TableContainer>
+          
           <div className="block md:hidden grid-cols-1">
             {data.map((item, index) => (
               <div key={index}>

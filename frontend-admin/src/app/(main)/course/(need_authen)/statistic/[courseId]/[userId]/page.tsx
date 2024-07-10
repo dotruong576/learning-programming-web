@@ -28,7 +28,7 @@ const CourseStatistics: React.FC = () => {
   return (
     <div className="lg:pr-10 lg:pl-10 lg:pb-10 lg:pt-5 p-3">
       <div>
-        <h2 className=" text-2xl md:text-3xl font-bold mb-3">Thống kê chi tiết thành viên của khoá học</h2>
+        <h2 className=" text-2xl md:text-3xl font-bold mb-3">Statistics on learner status</h2>
         {data && !isFetching ? (
           <>
             <h2 className=" text-xl md:text-2xl font-bold mb-3">{data?.title}</h2>
@@ -42,7 +42,7 @@ const CourseStatistics: React.FC = () => {
             <Skeleton variant="rounded" width={'100%'} height={100} />
           </div>
         )}
-        <h2 className=" text-xl font-bold mb-3">Danh sách bài giảng</h2>
+        <h2 className=" text-xl font-bold mb-3">Lesson List</h2>
       </div>
       {!isFetchingStatistic && statisticData ? (
         <>
@@ -50,12 +50,12 @@ const CourseStatistics: React.FC = () => {
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
               <TableHead>
                 <TableRow>
-                  <TableCell width={500}>Bài giảng</TableCell>
-                  <TableCell align="center">Thời lượng</TableCell>
-                  <TableCell align="center">Ngày tạo</TableCell>
-                  <TableCell align="center">Loại bài giảng</TableCell>
-                  <TableCell align="center">Trạng thái</TableCell>
-                  <TableCell align="center">Điểm số</TableCell>
+                  <TableCell width={500}>Lesson</TableCell>
+                  <TableCell align="center">Time</TableCell>
+                  <TableCell align="center">Created date</TableCell>
+                  <TableCell align="center">Type of lesson</TableCell>
+                  <TableCell align="center">Status</TableCell>
+                  <TableCell align="center">Scores</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -67,12 +67,12 @@ const CourseStatistics: React.FC = () => {
                     <TableCell align="center">
                       {row.type === ELessonType.Video
                         ? `${parseDurationVideo(parseInt(row.duration))}`
-                        : `${row.duration} câu`}
+                        : `${row.duration} Question`}
                     </TableCell>
                     <TableCell align="center">{moment(row.createdAt).format('DD/MM/YYYY')}</TableCell>
                     <TableCell align="center">{row.type}</TableCell>
                     <TableCell align="center">
-                      {row.status === EUserLessonStatus.Done ? 'Hoàn thành' : 'Chưa hoàn thành'}
+                      {row.status === EUserLessonStatus.Done ? 'completed' : 'unfinished'}
                     </TableCell>
                     <TableCell align="center">
                       {row.result ? `${row.result.completed}/${row.result.total}` : '-'}
@@ -92,7 +92,7 @@ const CourseStatistics: React.FC = () => {
                   duration={
                     item.type === ELessonType.Video
                       ? `${parseDurationVideo(parseInt(item.duration))}`
-                      : `${item.duration} câu`
+                      : `${item.duration} Question`
                   }
                   createdAt={moment(item.createdAt).format('DD/MM/YYYY')}
                 />
